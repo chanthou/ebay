@@ -1,3 +1,4 @@
+require 'ebay/types/ebay_payment_mismatch_details'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -10,6 +11,7 @@ module Ebay # :nodoc:
     #  boolean_node :buyer_selected_shipping, 'BuyerSelectedShipping', 'true', 'false', :optional => true
     #  text_node :payment_hold_status, 'PaymentHoldStatus', :optional => true
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
+    #  object_node :ebay_payment_mismatch_details, 'eBayPaymentMismatchDetails', :class => EBayPaymentMismatchDetails, :optional => true
     class TransactionStatus
       include XML::Mapping
       include Initializer
@@ -22,6 +24,7 @@ module Ebay # :nodoc:
       boolean_node :buyer_selected_shipping, 'BuyerSelectedShipping', 'true', 'false', :optional => true
       text_node :payment_hold_status, 'PaymentHoldStatus', :optional => true
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
+      object_node :ebay_payment_mismatch_details, 'eBayPaymentMismatchDetails', :class => EBayPaymentMismatchDetails, :optional => true
     end
   end
 end

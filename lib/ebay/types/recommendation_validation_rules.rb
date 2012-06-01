@@ -11,6 +11,7 @@ module Ebay # :nodoc:
     #  array_node :relationships, 'Relationship', :class => NameValueRelationship, :default_value => []
     #  text_node :variation_picture, 'VariationPicture', :optional => true
     #  text_node :variation_specifics, 'VariationSpecifics', :optional => true
+    #  text_node :value_format, 'ValueFormat', :optional => true
     class RecommendationValidationRules
       include XML::Mapping
       include Initializer
@@ -23,6 +24,7 @@ module Ebay # :nodoc:
       array_node :relationships, 'Relationship', :class => NameValueRelationship, :default_value => []
       text_node :variation_picture, 'VariationPicture', :optional => true
       text_node :variation_specifics, 'VariationSpecifics', :optional => true
+      text_node :value_format, 'ValueFormat', :optional => true
     end
   end
 end

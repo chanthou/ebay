@@ -12,6 +12,7 @@ module Ebay # :nodoc:
     #  numeric_node :shipping_time_max, 'ShippingTimeMax', :optional => true
     #  money_node :shipping_surcharge, 'ShippingSurcharge', :optional => true
     #  boolean_node :free_shipping, 'FreeShipping', 'true', 'false', :optional => true
+    #  boolean_node :local_pickup, 'LocalPickup', 'true', 'false', :optional => true
     class ShippingServiceOptions
       include XML::Mapping
       include Initializer
@@ -26,6 +27,7 @@ module Ebay # :nodoc:
       numeric_node :shipping_time_max, 'ShippingTimeMax', :optional => true
       money_node :shipping_surcharge, 'ShippingSurcharge', :optional => true
       boolean_node :free_shipping, 'FreeShipping', 'true', 'false', :optional => true
+      boolean_node :local_pickup, 'LocalPickup', 'true', 'false', :optional => true
     end
   end
 end

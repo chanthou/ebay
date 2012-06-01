@@ -7,7 +7,6 @@ module Ebay # :nodoc:
       OutBid = 'OutBid'
       EndOfAuction = 'EndOfAuction'
       AuctionCheckoutComplete = 'AuctionCheckoutComplete'
-      FixedPriceEndOfTransaction = 'FixedPriceEndOfTransaction'
       CheckoutBuyerRequestsTotal = 'CheckoutBuyerRequestsTotal'
       Feedback = 'Feedback'
       FeedbackForSeller = 'FeedbackForSeller'
@@ -82,6 +81,20 @@ module Ebay # :nodoc:
       MyMessagesHighPriorityMessage = 'MyMessagesHighPriorityMessage'
       MyMessagesHighPriorityMessageHeader = 'MyMessagesHighPriorityMessageHeader'
       EBPOnHoldCase = 'EBPOnHoldCase'
+      ReadyToShip = 'ReadyToShip'
+      ReadyForPayout = 'ReadyForPayout'
+      BidItemEndingSoon = 'BidItemEndingSoon'
+      ReturnCreated = 'ReturnCreated'
+      ReturnWaitingForSellerInfo = 'ReturnWaitingForSellerInfo'
+      ReturnSellerInfoOverdue = 'ReturnSellerInfoOverdue'
+      ReturnShipped = 'ReturnShipped'
+      ReturnDelivered = 'ReturnDelivered'
+      ReturnRefundOverdue = 'ReturnRefundOverdue'
+      ReturnClosed = 'ReturnClosed'
+      ReturnEscalated = 'ReturnEscalated'
+      UnmatchedPaymentReceived = 'UnmatchedPaymentReceived'
+      RefundSuccess = 'RefundSuccess'
+      RefundFailure = 'RefundFailure'
     end
   end
 end

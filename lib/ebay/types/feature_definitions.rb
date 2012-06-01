@@ -38,6 +38,10 @@ require 'ebay/types/safe_payment_required_definition'
 require 'ebay/types/classified_ad_pay_per_lead_enabled_definition'
 require 'ebay/types/item_specifics_enabled_definition'
 require 'ebay/types/paisa_pay_full_escrow_enabled_definition'
+require 'ebay/types/isbn_identifier_enabled_definition'
+require 'ebay/types/upc_identifier_enabled_definition'
+require 'ebay/types/ean_identifier_enabled_definition'
+require 'ebay/types/brand_mpn_identifier_enabled_definition'
 require 'ebay/types/best_offer_auto_accept_enabled_definition'
 require 'ebay/types/classified_ad_auto_accept_enabled_definition'
 require 'ebay/types/cross_border_trade_north_america_enabled_definition'
@@ -108,6 +112,10 @@ require 'ebay/types/min_item_compatibility_definition'
 require 'ebay/types/condition_enabled_definition'
 require 'ebay/types/condition_values_definition'
 require 'ebay/types/value_category_definition'
+require 'ebay/types/product_creation_enabled_definition'
+require 'ebay/types/compatible_vehicle_type_definition'
+require 'ebay/types/max_granular_fitment_count_definition'
+require 'ebay/types/payment_options_group_enabled_definition'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -152,6 +160,10 @@ module Ebay # :nodoc:
     #  object_node :classified_ad_pay_per_lead_enabled, 'ClassifiedAdPayPerLeadEnabled', :class => ClassifiedAdPayPerLeadEnabledDefinition, :optional => true
     #  object_node :item_specifics_enabled, 'ItemSpecificsEnabled', :class => ItemSpecificsEnabledDefinition, :optional => true
     #  object_node :paisa_pay_full_escrow_enabled, 'PaisaPayFullEscrowEnabled', :class => PaisaPayFullEscrowEnabledDefinition, :optional => true
+    #  object_node :isbn_identifier_enabled, 'ISBNIdentifierEnabled', :class => ISBNIdentifierEnabledDefinition, :optional => true
+    #  object_node :upc_identifier_enabled, 'UPCIdentifierEnabled', :class => UPCIdentifierEnabledDefinition, :optional => true
+    #  object_node :ean_identifier_enabled, 'EANIdentifierEnabled', :class => EANIdentifierEnabledDefinition, :optional => true
+    #  object_node :brand_mpn_identifier_enabled, 'BrandMPNIdentifierEnabled', :class => BrandMPNIdentifierEnabledDefinition, :optional => true
     #  object_node :best_offer_auto_accept_enabled, 'BestOfferAutoAcceptEnabled', :class => BestOfferAutoAcceptEnabledDefinition, :optional => true
     #  object_node :classified_ad_auto_accept_enabled, 'ClassifiedAdAutoAcceptEnabled', :class => ClassifiedAdAutoAcceptEnabledDefinition, :optional => true
     #  object_node :cross_border_trade_north_america_enabled, 'CrossBorderTradeNorthAmericaEnabled', :class => CrossBorderTradeNorthAmericaEnabledDefinition, :optional => true
@@ -222,6 +234,10 @@ module Ebay # :nodoc:
     #  object_node :condition_enabled, 'ConditionEnabled', :class => ConditionEnabledDefinition, :optional => true
     #  object_node :condition_values, 'ConditionValues', :class => ConditionValuesDefinition, :optional => true
     #  object_node :value_category, 'ValueCategory', :class => ValueCategoryDefinition, :optional => true
+    #  object_node :product_creation_enabled, 'ProductCreationEnabled', :class => ProductCreationEnabledDefinition, :optional => true
+    #  object_node :compatible_vehicle_type, 'CompatibleVehicleType', :class => CompatibleVehicleTypeDefinition, :optional => true
+    #  object_node :max_granular_fitment_count, 'MaxGranularFitmentCount', :class => MaxGranularFitmentCountDefinition, :optional => true
+    #  object_node :payment_options_group, 'PaymentOptionsGroup', :class => PaymentOptionsGroupEnabledDefinition, :optional => true
     class FeatureDefinitions
       include XML::Mapping
       include Initializer
@@ -266,6 +282,10 @@ module Ebay # :nodoc:
       object_node :classified_ad_pay_per_lead_enabled, 'ClassifiedAdPayPerLeadEnabled', :class => ClassifiedAdPayPerLeadEnabledDefinition, :optional => true
       object_node :item_specifics_enabled, 'ItemSpecificsEnabled', :class => ItemSpecificsEnabledDefinition, :optional => true
       object_node :paisa_pay_full_escrow_enabled, 'PaisaPayFullEscrowEnabled', :class => PaisaPayFullEscrowEnabledDefinition, :optional => true
+      object_node :isbn_identifier_enabled, 'ISBNIdentifierEnabled', :class => ISBNIdentifierEnabledDefinition, :optional => true
+      object_node :upc_identifier_enabled, 'UPCIdentifierEnabled', :class => UPCIdentifierEnabledDefinition, :optional => true
+      object_node :ean_identifier_enabled, 'EANIdentifierEnabled', :class => EANIdentifierEnabledDefinition, :optional => true
+      object_node :brand_mpn_identifier_enabled, 'BrandMPNIdentifierEnabled', :class => BrandMPNIdentifierEnabledDefinition, :optional => true
       object_node :best_offer_auto_accept_enabled, 'BestOfferAutoAcceptEnabled', :class => BestOfferAutoAcceptEnabledDefinition, :optional => true
       object_node :classified_ad_auto_accept_enabled, 'ClassifiedAdAutoAcceptEnabled', :class => ClassifiedAdAutoAcceptEnabledDefinition, :optional => true
       object_node :cross_border_trade_north_america_enabled, 'CrossBorderTradeNorthAmericaEnabled', :class => CrossBorderTradeNorthAmericaEnabledDefinition, :optional => true
@@ -336,6 +356,10 @@ module Ebay # :nodoc:
       object_node :condition_enabled, 'ConditionEnabled', :class => ConditionEnabledDefinition, :optional => true
       object_node :condition_values, 'ConditionValues', :class => ConditionValuesDefinition, :optional => true
       object_node :value_category, 'ValueCategory', :class => ValueCategoryDefinition, :optional => true
+      object_node :product_creation_enabled, 'ProductCreationEnabled', :class => ProductCreationEnabledDefinition, :optional => true
+      object_node :compatible_vehicle_type, 'CompatibleVehicleType', :class => CompatibleVehicleTypeDefinition, :optional => true
+      object_node :max_granular_fitment_count, 'MaxGranularFitmentCount', :class => MaxGranularFitmentCountDefinition, :optional => true
+      object_node :payment_options_group, 'PaymentOptionsGroup', :class => PaymentOptionsGroupEnabledDefinition, :optional => true
     end
   end
 end

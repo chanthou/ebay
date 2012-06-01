@@ -5,6 +5,7 @@ module Ebay # :nodoc:
     #  text_node :variation_specific_value, 'VariationSpecificValue', :optional => true
     #  text_node :picture_url, 'PictureURL', :optional => true
     #  text_node :gallery_url, 'GalleryURL', :optional => true
+    #  text_node :external_picture_url, 'ExternalPictureURL', :optional => true
     class VariationSpecificPictureSet
       include XML::Mapping
       include Initializer
@@ -12,6 +13,7 @@ module Ebay # :nodoc:
       text_node :variation_specific_value, 'VariationSpecificValue', :optional => true
       text_node :picture_url, 'PictureURL', :optional => true
       text_node :gallery_url, 'GalleryURL', :optional => true
+      text_node :external_picture_url, 'ExternalPictureURL', :optional => true
     end
   end
 end

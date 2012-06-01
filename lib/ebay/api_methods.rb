@@ -337,14 +337,6 @@ module Ebay
     def get_category_features(params = {})
       commit(Ebay::Requests::GetCategoryFeatures, params)
     end
-    # Builds Ebay::Requests#GetCategoryListings
-    #
-    # Returns Ebay::Responses#GetCategoryListings
-    #
-    # Official Documentation for GetCategoryListings[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/io_GetCategoryListings.html]
-    def get_category_listings(params = {})
-      commit(Ebay::Requests::GetCategoryListings, params)
-    end
     # Builds Ebay::Requests#GetCategoryMappings
     #
     # Returns Ebay::Responses#GetCategoryMappings
@@ -648,14 +640,6 @@ module Ebay
     # Official Documentation for GetPromotionalSaleDetails[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/io_GetPromotionalSaleDetails.html]
     def get_promotional_sale_details(params = {})
       commit(Ebay::Requests::GetPromotionalSaleDetails, params)
-    end
-    # Builds Ebay::Requests#GetSearchResults
-    #
-    # Returns Ebay::Responses#GetSearchResults
-    #
-    # Official Documentation for GetSearchResults[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/io_GetSearchResults.html]
-    def get_search_results(params = {})
-      commit(Ebay::Requests::GetSearchResults, params)
     end
     # Builds Ebay::Requests#GetSellerDashboard
     #

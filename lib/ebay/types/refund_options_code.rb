@@ -6,6 +6,7 @@ module Ebay # :nodoc:
       MoneyBack = 'MoneyBack'
       Exchange = 'Exchange'
       MerchandiseCredit = 'MerchandiseCredit'
+      MoneyBackOrExchange = 'MoneyBackOrExchange'
     end
   end
 end

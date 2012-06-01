@@ -19,6 +19,7 @@ module Ebay # :nodoc:
     #  money_node :final_value_fee, 'FinalValueFee', :optional => true
     #  object_node :promotional_sale_details, 'PromotionalSaleDetails', :class => PromotionalSaleDetails, :optional => true
     #  boolean_node :admin_ended, 'AdminEnded', 'true', 'false', :optional => true
+    #  boolean_node :sold_as_bin, 'SoldAsBin', 'true', 'false', :optional => true
     class SellingStatus
       include XML::Mapping
       include Initializer
@@ -38,6 +39,7 @@ module Ebay # :nodoc:
       money_node :final_value_fee, 'FinalValueFee', :optional => true
       object_node :promotional_sale_details, 'PromotionalSaleDetails', :class => PromotionalSaleDetails, :optional => true
       boolean_node :admin_ended, 'AdminEnded', 'true', 'false', :optional => true
+      boolean_node :sold_as_bin, 'SoldAsBin', 'true', 'false', :optional => true
     end
   end
 end

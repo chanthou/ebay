@@ -6,6 +6,8 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  text_node :name, 'Name', :optional => true
+    #  numeric_node :item_count, 'ItemCount', :optional => true
+    #  numeric_node :favorite_seller_count, 'FavoriteSellerCount', :optional => true
     #  array_node :items, 'ItemArray', 'Item', :class => Item, :default_value => []
     #  object_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList, :optional => true
     #  object_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList, :optional => true
@@ -14,6 +16,8 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'UserDefinedList'
       text_node :name, 'Name', :optional => true
+      numeric_node :item_count, 'ItemCount', :optional => true
+      numeric_node :favorite_seller_count, 'FavoriteSellerCount', :optional => true
       array_node :items, 'ItemArray', 'Item', :class => Item, :default_value => []
       object_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList, :optional => true
       object_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList, :optional => true

@@ -11,6 +11,8 @@ require 'ebay/types/listing_checkout_redirect_preference'
 require 'ebay/types/refund'
 require 'ebay/types/variation'
 require 'ebay/types/taxes'
+require 'ebay/types/payment_hold_detail'
+require 'ebay/types/seller_discounts'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -61,6 +63,10 @@ module Ebay # :nodoc:
     #  money_node :actual_shipping_cost, 'ActualShippingCost', :optional => true
     #  money_node :actual_handling_cost, 'ActualHandlingCost', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
+    #  object_node :payment_hold_details, 'PaymentHoldDetails', :class => PaymentHoldDetail, :optional => true
+    #  object_node :seller_discounts, 'SellerDiscounts', :class => SellerDiscounts, :optional => true
+    #  money_node :refund_amount, 'RefundAmount', :optional => true
+    #  text_node :refund_status, 'RefundStatus', :optional => true
     class Transaction
       include XML::Mapping
       include Initializer
@@ -111,6 +117,10 @@ module Ebay # :nodoc:
       money_node :actual_shipping_cost, 'ActualShippingCost', :optional => true
       money_node :actual_handling_cost, 'ActualHandlingCost', :optional => true
       text_node :order_line_item_id, 'OrderLineItemID', :optional => true
+      object_node :payment_hold_details, 'PaymentHoldDetails', :class => PaymentHoldDetail, :optional => true
+      object_node :seller_discounts, 'SellerDiscounts', :class => SellerDiscounts, :optional => true
+      money_node :refund_amount, 'RefundAmount', :optional => true
+      text_node :refund_status, 'RefundStatus', :optional => true
     end
   end
 end

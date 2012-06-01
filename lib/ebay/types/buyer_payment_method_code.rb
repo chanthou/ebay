@@ -34,6 +34,7 @@ module Ebay # :nodoc:
       ProPay = 'ProPay'
       PayOnPickup = 'PayOnPickup'
       Diners = 'Diners'
+      StandardPayment = 'StandardPayment'
     end
   end
 end

@@ -1,6 +1,7 @@
 require 'ebay/types/name_value_list'
 require 'ebay/types/selling_status'
 require 'ebay/types/selling_manager_product_inventory_status'
+require 'ebay/types/discount_price_info'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -18,6 +19,7 @@ module Ebay # :nodoc:
     #  object_node :selling_manager_product_inventory_status, 'SellingManagerProductInventoryStatus', :class => SellingManagerProductInventoryStatus, :optional => true
     #  numeric_node :watch_count, 'WatchCount', :optional => true
     #  text_node :private_notes, 'PrivateNotes', :optional => true
+    #  object_node :discount_price_info, 'DiscountPriceInfo', :class => DiscountPriceInfo, :optional => true
     class Variation
       include XML::Mapping
       include Initializer
@@ -35,6 +37,7 @@ module Ebay # :nodoc:
       object_node :selling_manager_product_inventory_status, 'SellingManagerProductInventoryStatus', :class => SellingManagerProductInventoryStatus, :optional => true
       numeric_node :watch_count, 'WatchCount', :optional => true
       text_node :private_notes, 'PrivateNotes', :optional => true
+      object_node :discount_price_info, 'DiscountPriceInfo', :class => DiscountPriceInfo, :optional => true
     end
   end
 end

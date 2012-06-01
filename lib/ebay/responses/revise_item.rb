@@ -1,4 +1,5 @@
 require 'ebay/types/fee'
+require 'ebay/types/product_suggestion'
 
 module Ebay # :nodoc:
   module Responses # :nodoc:
@@ -11,6 +12,7 @@ module Ebay # :nodoc:
     #  text_node :category2_id, 'Category2ID', :optional => true
     #  boolean_node :verify_only, 'VerifyOnly', 'true', 'false', :optional => true
     #  value_array_node :discount_reasons, 'DiscountReason', :default_value => []
+    #  array_node :product_suggestions, 'ProductSuggestions', 'ProductSuggestion', :class => ProductSuggestion, :default_value => []
     class ReviseItem < Abstract
       include XML::Mapping
       include Initializer
@@ -23,6 +25,7 @@ module Ebay # :nodoc:
       text_node :category2_id, 'Category2ID', :optional => true
       boolean_node :verify_only, 'VerifyOnly', 'true', 'false', :optional => true
       value_array_node :discount_reasons, 'DiscountReason', :default_value => []
+      array_node :product_suggestions, 'ProductSuggestions', 'ProductSuggestion', :class => ProductSuggestion, :default_value => []
     end
   end
 end

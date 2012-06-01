@@ -4,6 +4,8 @@ require 'ebay/types/address'
 require 'ebay/types/shipping_service_options'
 require 'ebay/types/external_transaction'
 require 'ebay/types/transaction'
+require 'ebay/types/payment_hold_detail'
+require 'ebay/types/refund'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -32,6 +34,13 @@ module Ebay # :nodoc:
     #  boolean_node :bundle_purchase, 'BundlePurchase', 'true', 'false', :optional => true
     #  text_node :buyer_checkout_message, 'BuyerCheckoutMessage', :optional => true
     #  text_node :eias_token, 'EIASToken', :optional => true
+    #  text_node :payment_hold_status, 'PaymentHoldStatus', :optional => true
+    #  object_node :payment_hold_details, 'PaymentHoldDetails', :class => PaymentHoldDetail, :optional => true
+    #  money_node :refund_amount, 'RefundAmount', :optional => true
+    #  text_node :refund_status, 'RefundStatus', :optional => true
+    #  money_node :refund_amount, 'RefundAmount', :optional => true
+    #  text_node :refund_status, 'RefundStatus', :optional => true
+    #  array_node :refunds, 'RefundArray', 'Refund', :class => Refund, :default_value => []
     class Order
       include XML::Mapping
       include Initializer
@@ -60,6 +69,13 @@ module Ebay # :nodoc:
       boolean_node :bundle_purchase, 'BundlePurchase', 'true', 'false', :optional => true
       text_node :buyer_checkout_message, 'BuyerCheckoutMessage', :optional => true
       text_node :eias_token, 'EIASToken', :optional => true
+      text_node :payment_hold_status, 'PaymentHoldStatus', :optional => true
+      object_node :payment_hold_details, 'PaymentHoldDetails', :class => PaymentHoldDetail, :optional => true
+      money_node :refund_amount, 'RefundAmount', :optional => true
+      text_node :refund_status, 'RefundStatus', :optional => true
+      money_node :refund_amount, 'RefundAmount', :optional => true
+      text_node :refund_status, 'RefundStatus', :optional => true
+      array_node :refunds, 'RefundArray', 'Refund', :class => Refund, :default_value => []
     end
   end
 end

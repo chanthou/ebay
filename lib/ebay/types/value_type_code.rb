@@ -8,6 +8,7 @@ module Ebay # :nodoc:
       ISBN = 'ISBN'
       UPC = 'UPC'
       EAN = 'EAN'
+      Date = 'Date'
     end
   end
 end

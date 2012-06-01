@@ -1,3 +1,5 @@
+require 'ebay/types/non_profit_address'
+require 'ebay/types/non_profit_social_address'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -15,6 +17,11 @@ module Ebay # :nodoc:
     #  boolean_node :display_name_in_checkout, 'DisplayNameInCheckout', 'true', 'false', :optional => true
     #  text_node :description, 'Description', :optional => true
     #  boolean_node :show_multiple_donation_amount_in_checkout, 'ShowMultipleDonationAmountInCheckout', 'true', 'false', :optional => true
+    #  numeric_node :popularity_index, 'PopularityIndex', :optional => true
+    #  text_node :ein, 'EIN', :optional => true
+    #  text_node :non_profit_second_name, 'NonProfitSecondName', :optional => true
+    #  array_node :non_profit_addresses, 'NonProfitAddress', :class => NonProfitAddress, :default_value => []
+    #  array_node :non_profit_social_addresses, 'NonProfitSocialAddress', :class => NonProfitSocialAddress, :default_value => []
     #  text_node :id, '@id', :optional => true
     class CharityInfo
       include XML::Mapping
@@ -33,6 +40,11 @@ module Ebay # :nodoc:
       boolean_node :display_name_in_checkout, 'DisplayNameInCheckout', 'true', 'false', :optional => true
       text_node :description, 'Description', :optional => true
       boolean_node :show_multiple_donation_amount_in_checkout, 'ShowMultipleDonationAmountInCheckout', 'true', 'false', :optional => true
+      numeric_node :popularity_index, 'PopularityIndex', :optional => true
+      text_node :ein, 'EIN', :optional => true
+      text_node :non_profit_second_name, 'NonProfitSecondName', :optional => true
+      array_node :non_profit_addresses, 'NonProfitAddress', :class => NonProfitAddress, :default_value => []
+      array_node :non_profit_social_addresses, 'NonProfitSocialAddress', :class => NonProfitSocialAddress, :default_value => []
       text_node :id, '@id', :optional => true
     end
   end

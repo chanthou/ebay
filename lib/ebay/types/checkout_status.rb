@@ -1,3 +1,4 @@
+require 'ebay/types/ebay_payment_mismatch_details'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -7,6 +8,7 @@ module Ebay # :nodoc:
     #  text_node :payment_method, 'PaymentMethod', :optional => true
     #  text_node :status, 'Status', :optional => true
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
+    #  object_node :ebay_payment_mismatch_details, 'eBayPaymentMismatchDetails', :class => EBayPaymentMismatchDetails, :optional => true
     class CheckoutStatus
       include XML::Mapping
       include Initializer
@@ -16,6 +18,7 @@ module Ebay # :nodoc:
       text_node :payment_method, 'PaymentMethod', :optional => true
       text_node :status, 'Status', :optional => true
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
+      object_node :ebay_payment_mismatch_details, 'eBayPaymentMismatchDetails', :class => EBayPaymentMismatchDetails, :optional => true
     end
   end
 end

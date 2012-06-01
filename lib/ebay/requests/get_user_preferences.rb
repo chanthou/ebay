@@ -10,10 +10,12 @@ module Ebay # :nodoc:
     #  boolean_node :show_seller_favorite_item_preferences, 'ShowSellerFavoriteItemPreferences', 'true', 'false', :optional => true
     #  boolean_node :show_pro_stores_preferences, 'ShowProStoresPreferences', 'true', 'false', :optional => true
     #  boolean_node :show_email_shipment_tracking_number_preference, 'ShowEmailShipmentTrackingNumberPreference', 'true', 'false', :optional => true
+    #  boolean_node :show_required_ship_phone_number_preference, 'ShowRequiredShipPhoneNumberPreference', 'true', 'false', :optional => true
     #  boolean_node :show_seller_exclude_ship_to_location_preference, 'ShowSellerExcludeShipToLocationPreference', 'true', 'false', :optional => true
     #  boolean_node :show_unpaid_item_assistance_preference, 'ShowUnpaidItemAssistancePreference', 'true', 'false', :optional => true
     #  boolean_node :show_purchase_reminder_email_preferences, 'ShowPurchaseReminderEmailPreferences', 'true', 'false', :optional => true
     #  boolean_node :show_unpaid_item_assistance_exclusion_list, 'ShowUnpaidItemAssistanceExclusionList', 'true', 'false', :optional => true
+    #  boolean_node :show_seller_profile_preferences, 'ShowSellerProfilePreferences', 'true', 'false'
     class GetUserPreferences < Abstract
       include XML::Mapping
       include Initializer
@@ -26,10 +28,12 @@ module Ebay # :nodoc:
       boolean_node :show_seller_favorite_item_preferences, 'ShowSellerFavoriteItemPreferences', 'true', 'false', :optional => true
       boolean_node :show_pro_stores_preferences, 'ShowProStoresPreferences', 'true', 'false', :optional => true
       boolean_node :show_email_shipment_tracking_number_preference, 'ShowEmailShipmentTrackingNumberPreference', 'true', 'false', :optional => true
+      boolean_node :show_required_ship_phone_number_preference, 'ShowRequiredShipPhoneNumberPreference', 'true', 'false', :optional => true
       boolean_node :show_seller_exclude_ship_to_location_preference, 'ShowSellerExcludeShipToLocationPreference', 'true', 'false', :optional => true
       boolean_node :show_unpaid_item_assistance_preference, 'ShowUnpaidItemAssistancePreference', 'true', 'false', :optional => true
       boolean_node :show_purchase_reminder_email_preferences, 'ShowPurchaseReminderEmailPreferences', 'true', 'false', :optional => true
       boolean_node :show_unpaid_item_assistance_exclusion_list, 'ShowUnpaidItemAssistanceExclusionList', 'true', 'false', :optional => true
+      boolean_node :show_seller_profile_preferences, 'ShowSellerProfilePreferences', 'true', 'false'
     end
   end
 end
