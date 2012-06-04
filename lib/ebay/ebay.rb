@@ -10,9 +10,9 @@ class Hash
   end
 end
 
-require 'ebay/initializer'
-require 'ebay/enumeration'
-require 'ebay/inflections'
+require 'ebay/helpers/initializer'
+require 'ebay/helpers/enumeration'
+require 'ebay/helpers/inflections'
 require 'ebay/schema/version'
 
 # Fix circular dependency

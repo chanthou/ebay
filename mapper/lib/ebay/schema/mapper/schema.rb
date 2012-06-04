@@ -1,5 +1,5 @@
 require 'mapper/parser'
-require 'mapper/enumeration'
+require 'ebay/helpers/enumeration'
 require 'mapper/enumeration_validation'
 require 'mapper/node'
 require 'mapper/ruby_class_generator_helper'

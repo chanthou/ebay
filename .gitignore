@@ -1,4 +1,4 @@
 .bundle
 Gemfile.lock
-lib/ebay/schema/ebaySvc.xsd
+ebaySvc.xsd
 examples/config.rb

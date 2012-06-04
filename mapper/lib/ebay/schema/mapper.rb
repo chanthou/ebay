@@ -5,6 +5,11 @@ require 'erb'
 require 'logger'
 require 'rubygems'
 require 'active_support'
+
+require 'ebay/helpers/initializer'
+require 'ebay/helpers/enumeration'
+require 'ebay/helpers/inflections'
+
 require 'mapper/schema'
 require 'mapper/class_template'
 require 'mapper/class_definition'

@@ -1,0 +1,4 @@
+source "http://rubygems.org"
+
+gem "activesupport", "~> 2.3"
+gem "libxml-ruby", "~> 1.1.4"
