@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  numeric_node :bid_count, 'BidCount', :optional => true
     #  money_node :converted_promotion_price, 'ConvertedPromotionPrice', :optional => true
     class PromotionDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PromotionDetails'
       money_node :promotion_price, 'PromotionPrice', :optional => true

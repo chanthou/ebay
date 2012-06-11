@@ -17,7 +17,7 @@ module Ebay # :nodoc:
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     #  text_node :transaction_id, 'TransactionID', :optional => true
     class AccountEntry
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AccountEntry'
       text_node :account_details_entry_type, 'AccountDetailsEntryType', :optional => true

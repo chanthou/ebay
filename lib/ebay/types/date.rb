@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  numeric_node :month, 'Month', :optional => true
     #  numeric_node :day, 'Day', :optional => true
     class Date
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Date'
       numeric_node :year, 'Year', :optional => true

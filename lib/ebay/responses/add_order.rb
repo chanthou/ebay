@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :order_id, 'OrderID', :optional => true
     #  time_node :created_time, 'CreatedTime', :optional => true
     class AddOrder < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddOrderResponse'
       text_node :order_id, 'OrderID', :optional => true

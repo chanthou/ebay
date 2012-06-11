@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :token_status, 'TokenStatus', :class => TokenStatus, :optional => true
     class GetTokenStatus < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetTokenStatusResponse'
       object_node :token_status, 'TokenStatus', :class => TokenStatus, :optional => true

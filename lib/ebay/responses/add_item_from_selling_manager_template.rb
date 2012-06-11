@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :category_id, 'CategoryID', :optional => true
     #  text_node :category2_id, 'Category2ID', :optional => true
     class AddItemFromSellingManagerTemplate < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddItemFromSellingManagerTemplateResponse'
       text_node :item_id, 'ItemID', :optional => true

@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :count, 'Count', :optional => true
     class MaximumUnpaidItemStrikesCountDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MaximumUnpaidItemStrikesCountDetails'
       numeric_node :count, 'Count', :optional => true

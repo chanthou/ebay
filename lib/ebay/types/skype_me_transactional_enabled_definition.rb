@@ -3,7 +3,7 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     class SkypeMeTransactionalEnabledDefinition
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SkypeMeTransactionalEnabledDefinition'
     end

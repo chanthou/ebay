@@ -3,7 +3,7 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     class ValueCategoryDefinition
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ValueCategoryDefinition'
     end

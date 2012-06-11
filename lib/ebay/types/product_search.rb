@@ -20,7 +20,7 @@ module Ebay # :nodoc:
     #  text_node :product_reference_id, 'ProductReferenceID', :optional => true
     #  object_node :external_product_id, 'ExternalProductID', :class => ExternalProductID, :optional => true
     class ProductSearch
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ProductSearch'
       text_node :product_search_id, 'ProductSearchID', :optional => true

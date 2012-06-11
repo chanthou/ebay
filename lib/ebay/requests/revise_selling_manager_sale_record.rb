@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  object_node :selling_manager_sold_order, 'SellingManagerSoldOrder', :class => SellingManagerSoldOrder, :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class ReviseSellingManagerSaleRecord < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseSellingManagerSaleRecordRequest'
       text_node :item_id, 'ItemID', :optional => true

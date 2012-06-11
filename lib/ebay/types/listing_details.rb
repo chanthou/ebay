@@ -26,7 +26,7 @@ module Ebay # :nodoc:
     #  boolean_node :pay_per_lead_enabled, 'PayPerLeadEnabled', 'true', 'false', :optional => true
     #  money_node :best_offer_auto_accept_price, 'BestOfferAutoAcceptPrice', :optional => true
     class ListingDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ListingDetails'
       boolean_node :adult, 'Adult', 'true', 'false', :optional => true

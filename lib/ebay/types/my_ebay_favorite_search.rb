@@ -30,7 +30,7 @@ module Ebay # :nodoc:
     #  numeric_node :quantity, 'Quantity', :optional => true
     #  text_node :quantity_operator, 'QuantityOperator', :optional => true
     class MyeBayFavoriteSearch
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MyeBayFavoriteSearch'
       text_node :search_name, 'SearchName', :optional => true

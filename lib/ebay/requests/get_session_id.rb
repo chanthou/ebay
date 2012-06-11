@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :ru_name, 'RuName', :optional => true
     class GetSessionID < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSessionIDRequest'
       text_node :ru_name, 'RuName', :optional => true

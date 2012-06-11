@@ -18,7 +18,7 @@ module Ebay # :nodoc:
     #  time_node :paid_time, 'PaidTime', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class SellerPayment
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerPayment'
       text_node :item_id, 'ItemID', :optional => true

@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :bid_group_name, 'BidGroupName', :optional => true
     #  text_node :bid_group_status, 'BidGroupStatus', :optional => true
     class BidGroup
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BidGroup'
       array_node :bid_group_items, 'BidGroupItem', :class => BidGroupItem, :default_value => []

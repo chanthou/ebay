@@ -19,7 +19,7 @@ module Ebay # :nodoc:
     #  object_node :product_listing_details, 'ProductListingDetails', :class => ProductListingDetails, :optional => true
     #  text_node :title, 'Title', :optional => true
     class GetRecommendationsResponseContainer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetRecommendationsResponseContainer'
       object_node :listing_analyzer_recommendations, 'ListingAnalyzerRecommendations', :class => ListingAnalyzerRecommendations, :optional => true

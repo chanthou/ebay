@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  numeric_node :destination_parent_category_id, 'DestinationParentCategoryID', :optional => true
     #  array_node :store_categories, 'StoreCategories', 'CustomCategory', :class => StoreCustomCategory, :default_value => []
     class SetStoreCategories < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SetStoreCategoriesRequest'
       text_node :action, 'Action', :optional => true

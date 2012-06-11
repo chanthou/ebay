@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :user_defined_list_name, 'UserDefinedListName', :optional => true
     #  boolean_node :include_list_contents, 'IncludeListContents', 'true', 'false', :optional => true
     class MyeBaySelection
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MyeBaySelection'
       boolean_node :include, 'Include', 'true', 'false', :optional => true

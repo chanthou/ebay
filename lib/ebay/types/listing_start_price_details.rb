@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  time_node :update_time, 'UpdateTime', :optional => true
     #  numeric_node :min_buy_it_now_price_percent, 'MinBuyItNowPricePercent', :optional => true
     class ListingStartPriceDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ListingStartPriceDetails'
       text_node :description, 'Description', :optional => true

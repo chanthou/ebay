@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :best_offer_status, 'BestOfferStatus', :optional => true
     #  object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     class GetBestOffers < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetBestOffersRequest'
       text_node :item_id, 'ItemID', :optional => true

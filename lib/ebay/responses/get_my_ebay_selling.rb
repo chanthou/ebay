@@ -16,7 +16,7 @@ module Ebay # :nodoc:
     #  object_node :deleted_from_sold_list, 'DeletedFromSoldList', :class => PaginatedOrderTransactionArray, :optional => true
     #  object_node :deleted_from_unsold_list, 'DeletedFromUnsoldList', :class => PaginatedItemArray, :optional => true
     class GetMyeBaySelling < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMyeBaySellingResponse'
       object_node :selling_summary, 'SellingSummary', :class => SellingSummary, :optional => true

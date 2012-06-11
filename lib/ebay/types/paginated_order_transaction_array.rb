@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :order_transactions, 'OrderTransactionArray', 'OrderTransaction', :class => OrderTransaction, :default_value => []
     #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true
     class PaginatedOrderTransactionArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PaginatedOrderTransactionArray'
       array_node :order_transactions, 'OrderTransactionArray', 'OrderTransaction', :class => OrderTransaction, :default_value => []

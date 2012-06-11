@@ -52,7 +52,7 @@ module Ebay # :nodoc:
     #  array_node :recoupment_policy_details, 'RecoupmentPolicyDetails', :class => RecoupmentPolicyDetails, :default_value => []
     #  array_node :shipping_category_details, 'ShippingCategoryDetails', :class => ShippingCategoryDetails, :default_value => []
     class GeteBayDetails < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GeteBayDetailsResponse'
       array_node :country_details, 'CountryDetails', :class => CountryDetails, :default_value => []

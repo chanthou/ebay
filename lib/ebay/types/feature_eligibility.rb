@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  boolean_node :qualifies_for_variations, 'QualifiesForVariations', 'true', 'false', :optional => true
     #  boolean_node :qualified_for_auction_one_day_duration, 'QualifiedForAuctionOneDayDuration', 'true', 'false', :optional => true
     class FeatureEligibility
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'FeatureEligibility'
       boolean_node :qualifies_for_buy_it_now, 'QualifiesForBuyItNow', 'true', 'false', :optional => true

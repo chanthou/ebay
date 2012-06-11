@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  boolean_node :classified_ad_contact_by_email_enabled, 'ClassifiedAdContactByEmailEnabled', 'true', 'false', :optional => true
     #  text_node :pay_per_lead_phone_number, 'PayPerLeadPhoneNumber', :optional => true
     class ExtendedContactDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ExtendedContactDetails'
       object_node :contact_hours_details, 'ContactHoursDetails', :class => ContactHoursDetails, :optional => true

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :attribute_system_version, 'AttributeSystemVersion', :optional => true
     #  numeric_node :product_finder_id, 'ProductFinderID', :optional => true
     class GetProductFinder < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetProductFinderRequest'
       text_node :attribute_system_version, 'AttributeSystemVersion', :optional => true

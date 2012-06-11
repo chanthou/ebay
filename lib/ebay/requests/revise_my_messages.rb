@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  boolean_node :flagged, 'Flagged', 'true', 'false', :optional => true
     #  numeric_node :folder_id, 'FolderID', :optional => true
     class ReviseMyMessages < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseMyMessagesRequest'
       value_array_node :message_ids, 'MessageIDs', 'MessageID', :default_value => []

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  numeric_node :total_number_of_pages, 'TotalNumberOfPages', :optional => true
     #  numeric_node :total_number_of_entries, 'TotalNumberOfEntries', :optional => true
     class PaginationResult
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PaginationResult'
       numeric_node :total_number_of_pages, 'TotalNumberOfPages', :optional => true

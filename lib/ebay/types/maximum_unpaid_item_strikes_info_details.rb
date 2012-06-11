@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :maximum_unpaid_item_strikes_counts, 'MaximumUnpaidItemStrikesCount', :class => MaximumUnpaidItemStrikesCountDetails, :default_value => []
     #  array_node :maximum_unpaid_item_strikes_durations, 'MaximumUnpaidItemStrikesDuration', :class => MaximumUnpaidItemStrikesDurationDetails, :default_value => []
     class MaximumUnpaidItemStrikesInfoDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MaximumUnpaidItemStrikesInfoDetails'
       array_node :maximum_unpaid_item_strikes_counts, 'MaximumUnpaidItemStrikesCount', :class => MaximumUnpaidItemStrikesCountDetails, :default_value => []

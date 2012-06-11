@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  array_node :theme_groups, 'ThemeGroup', :class => ThemeGroup, :default_value => []
     #  numeric_node :theme_total, 'ThemeTotal', :optional => true
     class GetDescriptionTemplates < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetDescriptionTemplatesResponse'
       array_node :description_templates, 'DescriptionTemplate', :class => DescriptionTemplate, :default_value => []

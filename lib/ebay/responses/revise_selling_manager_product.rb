@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails, :optional => true
     class ReviseSellingManagerProduct < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseSellingManagerProductResponse'
       object_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails, :optional => true

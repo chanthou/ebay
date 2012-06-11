@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :discount_name, 'DiscountName', :optional => true
     #  array_node :discount_profiles, 'DiscountProfile', :class => DiscountProfile, :default_value => []
     class FlatShippingDiscount
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'FlatShippingDiscount'
       text_node :discount_name, 'DiscountName', :optional => true

@@ -14,7 +14,7 @@ module Ebay # :nodoc:
     #  text_node :best_offer_code_type, 'BestOfferCodeType', :optional => true
     #  text_node :call_status, 'CallStatus', :optional => true
     class BestOffer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BestOffer'
       text_node :best_offer_id, 'BestOfferID', :optional => true

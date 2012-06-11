@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :value, 'Value', :optional => true
     #  text_node :source, 'Source', :optional => true
     class NameValueList
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'NameValueList'
       text_node :name, 'Name', :optional => true

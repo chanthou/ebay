@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
     #  object_node :ebay_payment_mismatch_details, 'eBayPaymentMismatchDetails', :class => EBayPaymentMismatchDetails, :optional => true
     class TransactionStatus
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'TransactionStatus'
       text_node :ebay_payment_status, 'eBayPaymentStatus', :optional => true

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :shipping_carrier_used, 'ShippingCarrierUsed', :optional => true
     #  text_node :shipment_tracking_number, 'ShipmentTrackingNumber', :optional => true
     class ShipmentTrackingDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ShipmentTrackingDetails'
       text_node :shipping_carrier_used, 'ShippingCarrierUsed', :optional => true

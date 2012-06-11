@@ -15,7 +15,7 @@ module Ebay # :nodoc:
     #  boolean_node :include_variations, 'IncludeVariations', 'true', 'false', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class GetItemTransactions < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetItemTransactionsRequest'
       text_node :item_id, 'ItemID', :optional => true

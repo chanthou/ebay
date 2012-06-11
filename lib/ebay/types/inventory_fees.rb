@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :item_id, 'ItemID', :optional => true
     #  array_node :fees, 'Fee', :class => Fee, :default_value => []
     class InventoryFees
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'InventoryFees'
       text_node :item_id, 'ItemID', :optional => true

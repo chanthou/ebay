@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :duration, 'Duration', :optional => true
     #  numeric_node :listing_hold_inventory_level, 'ListingHoldInventoryLevel', :optional => true
     class SellingManagerAutoSecondChanceOffer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerAutoSecondChanceOffer'
       text_node :second_chance_offer_condition, 'SecondChanceOfferCondition', :optional => true

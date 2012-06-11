@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  time_node :time_to, 'TimeTo', :optional => true
     #  object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     class GetVeROReportStatus < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetVeROReportStatusRequest'
       numeric_node :vero_report_packet_id, 'VeROReportPacketID', :optional => true

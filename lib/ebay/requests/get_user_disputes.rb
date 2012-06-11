@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  time_node :mod_time_to, 'ModTimeTo', :optional => true
     #  object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     class GetUserDisputes < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetUserDisputesRequest'
       text_node :dispute_filter_type, 'DisputeFilterType', :optional => true

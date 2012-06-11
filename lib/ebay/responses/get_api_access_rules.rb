@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :api_access_rules, 'ApiAccessRule', :class => ApiAccessRule, :default_value => []
     class GetApiAccessRules < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetApiAccessRulesResponse'
       array_node :api_access_rules, 'ApiAccessRule', :class => ApiAccessRule, :default_value => []

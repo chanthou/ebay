@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :value, 'Value', :optional => true
     #  object_node :validation_rules, 'ValidationRules', :class => RecommendationValidationRules, :optional => true
     class ValueRecommendation
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ValueRecommendation'
       text_node :value, 'Value', :optional => true

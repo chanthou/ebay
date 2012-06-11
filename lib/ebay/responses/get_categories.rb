@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  numeric_node :minimum_reserve_price, 'MinimumReservePrice', :optional => true
     #  boolean_node :reduce_reserve_allowed, 'ReduceReserveAllowed', 'true', 'false', :optional => true
     class GetCategories < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetCategoriesResponse'
       array_node :categories, 'CategoryArray', 'Category', :class => Category, :default_value => []

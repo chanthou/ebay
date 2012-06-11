@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  object_node :selling_summary, 'SellingSummary', :class => ItemListCustomization, :optional => true
     #  boolean_node :hide_variations, 'HideVariations', 'true', 'false', :optional => true
     class GetMyeBaySelling < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMyeBaySellingRequest'
       object_node :scheduled_list, 'ScheduledList', :class => ItemListCustomization, :optional => true

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :returns_accepted_option, 'ReturnsAcceptedOption', :optional => true
     #  text_node :description, 'Description', :optional => true
     class ReturnsAcceptedDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReturnsAcceptedDetails'
       text_node :returns_accepted_option, 'ReturnsAcceptedOption', :optional => true

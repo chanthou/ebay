@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :error_code, 'ErrorCode', :optional => true
     #  text_node :item_to_unsubscribe, 'ItemToUnsubscribe', :optional => true
     class SMSSubscription
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SMSSubscription'
       text_node :sms_phone, 'SMSPhone', :optional => true

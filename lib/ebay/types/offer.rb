@@ -21,7 +21,7 @@ module Ebay # :nodoc:
     #  text_node :best_offer_id, 'BestOfferID', :optional => true
     #  money_node :my_max_bid, 'MyMaxBid', :optional => true
     class Offer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Offer'
       text_node :action, 'Action', :optional => true

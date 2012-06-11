@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  numeric_node :won_duration_in_days, 'WonDurationInDays', :optional => true
     #  numeric_node :best_offer_count, 'BestOfferCount', :optional => true
     class BuyingSummary
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BuyingSummary'
       numeric_node :bidding_count, 'BiddingCount', :optional => true

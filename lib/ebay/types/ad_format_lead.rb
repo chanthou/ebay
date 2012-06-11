@@ -24,7 +24,7 @@ module Ebay # :nodoc:
     #  boolean_node :answer1, 'Answer1', 'true', 'false', :optional => true
     #  boolean_node :answer2, 'Answer2', 'true', 'false', :optional => true
     class AdFormatLead
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AdFormatLead'
       text_node :additional_information, 'AdditionalInformation', :optional => true

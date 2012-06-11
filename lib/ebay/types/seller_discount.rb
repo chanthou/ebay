@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  money_node :item_discount_amount, 'ItemDiscountAmount', :optional => true
     #  money_node :shipping_discount_amount, 'ShippingDiscountAmount', :optional => true
     class SellerDiscount
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerDiscount'
       numeric_node :campaign_id, 'CampaignID', :optional => true

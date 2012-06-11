@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  boolean_node :remove_all_items, 'RemoveAllItems', 'true', 'false', :optional => true
     #  array_node :variation_keys, 'VariationKey', :class => VariationKey, :default_value => []
     class RemoveFromWatchList < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RemoveFromWatchListRequest'
       value_array_node :item_ids, 'ItemID', :default_value => []

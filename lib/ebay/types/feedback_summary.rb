@@ -19,7 +19,7 @@ module Ebay # :nodoc:
     #  object_node :seller_role_metrics, 'SellerRoleMetrics', :class => SellerRoleMetrics, :optional => true
     #  object_node :buyer_role_metrics, 'BuyerRoleMetrics', :class => BuyerRoleMetrics, :optional => true
     class FeedbackSummary
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'FeedbackSummary'
       array_node :bid_retraction_feedback_periods, 'BidRetractionFeedbackPeriodArray', 'FeedbackPeriod', :class => FeedbackPeriod, :default_value => []

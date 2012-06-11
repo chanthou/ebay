@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :subscriptions, 'Subscription', :class => StoreSubscription, :default_value => []
     class StoreSubscriptionArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreSubscriptionArray'
       array_node :subscriptions, 'Subscription', :class => StoreSubscription, :default_value => []

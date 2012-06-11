@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  money_node :fee, 'Fee', :optional => true
     #  numeric_node :storage_size, 'StorageSize', :optional => true
     class PictureManagerSubscription
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PictureManagerSubscription'
       text_node :subscription_level, 'SubscriptionLevel', :optional => true

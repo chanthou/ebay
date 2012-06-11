@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class GetFeedback < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetFeedbackRequest'
       text_node :user_id, 'UserID', :optional => true

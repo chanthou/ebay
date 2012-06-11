@@ -17,7 +17,7 @@ module Ebay # :nodoc:
     #  object_node :shipping_insurance, 'ShippingInsurance', :class => ShippingInsurance, :optional => true
     #  object_node :international_shipping_insurance, 'InternationalShippingInsurance', :class => ShippingInsurance, :optional => true
     class SetShippingDiscountProfiles < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SetShippingDiscountProfilesRequest'
       text_node :currency_id, 'CurrencyID', :optional => true

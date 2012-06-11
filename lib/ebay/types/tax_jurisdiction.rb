@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :detail_version, 'DetailVersion', :optional => true
     #  time_node :update_time, 'UpdateTime', :optional => true
     class TaxJurisdiction
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'TaxJurisdiction'
       text_node :jurisdiction_id, 'JurisdictionID', :optional => true

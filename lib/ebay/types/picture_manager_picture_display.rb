@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  numeric_node :height, 'Height', :optional => true
     #  numeric_node :width, 'Width', :optional => true
     class PictureManagerPictureDisplay
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PictureManagerPictureDisplay'
       text_node :display_type, 'DisplayType', :optional => true

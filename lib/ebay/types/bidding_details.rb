@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  boolean_node :winning, 'Winning', 'true', 'false', :optional => true
     #  boolean_node :bid_assistant, 'BidAssistant', 'true', 'false', :optional => true
     class BiddingDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BiddingDetails'
       money_node :converted_max_bid, 'ConvertedMaxBid', :optional => true

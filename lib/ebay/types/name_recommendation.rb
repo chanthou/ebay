@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  text_node :source, 'Source', :optional => true
     #  text_node :help_text, 'HelpText', :optional => true
     class NameRecommendation
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'NameRecommendation'
       text_node :name, 'Name', :optional => true

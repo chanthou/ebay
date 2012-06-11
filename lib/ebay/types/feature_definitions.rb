@@ -239,7 +239,7 @@ module Ebay # :nodoc:
     #  object_node :max_granular_fitment_count, 'MaxGranularFitmentCount', :class => MaxGranularFitmentCountDefinition, :optional => true
     #  object_node :payment_options_group, 'PaymentOptionsGroup', :class => PaymentOptionsGroupEnabledDefinition, :optional => true
     class FeatureDefinitions
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'FeatureDefinitions'
       array_node :listing_durations, 'ListingDurations', 'ListingDuration', :class => ListingDurationDefinition, :default_value => []

@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  money_node :each_additional_off_amount, 'EachAdditionalOffAmount', :optional => true
     #  numeric_node :each_additional_percent_off, 'EachAdditionalPercentOff', :optional => true
     class CalculatedHandlingDiscount
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CalculatedHandlingDiscount'
       text_node :discount_name, 'DiscountName', :optional => true

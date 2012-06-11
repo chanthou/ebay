@@ -9,7 +9,7 @@ def type
 end
 
     class UnpaidItem
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'UnpaidItem'
       text_node :status, 'Status', :optional => true

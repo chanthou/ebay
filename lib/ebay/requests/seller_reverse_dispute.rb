@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :dispute_id, 'DisputeID', :optional => true
     #  text_node :dispute_resolution_reason, 'DisputeResolutionReason', :optional => true
     class SellerReverseDispute < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerReverseDisputeRequest'
       text_node :dispute_id, 'DisputeID', :optional => true

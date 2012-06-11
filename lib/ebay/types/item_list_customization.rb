@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     #  text_node :order_status_filter, 'OrderStatusFilter', :optional => true
     class ItemListCustomization
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ItemListCustomization'
       boolean_node :include, 'Include', 'true', 'false', :optional => true

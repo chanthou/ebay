@@ -51,7 +51,7 @@ module Ebay # :nodoc:
     #  array_node :shipment_tracking_details, 'ShipmentTrackingDetails', :class => ShipmentTrackingDetails, :default_value => []
     #  object_node :rate_table_details, 'RateTableDetails', :class => RateTableDetails, :optional => true
     class ShippingDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ShippingDetails'
       boolean_node :allow_payment_edit, 'AllowPaymentEdit', 'true', 'false', :optional => true

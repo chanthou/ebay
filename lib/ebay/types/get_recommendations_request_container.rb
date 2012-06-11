@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  boolean_node :exclude_relationships, 'ExcludeRelationships', 'true', 'false', :optional => true
     #  boolean_node :include_confidence, 'IncludeConfidence', 'true', 'false', :optional => true
     class GetRecommendationsRequestContainer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetRecommendationsRequestContainer'
       text_node :listing_flow, 'ListingFlow', :optional => true

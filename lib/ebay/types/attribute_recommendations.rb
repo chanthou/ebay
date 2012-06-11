@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :attribute_sets, 'AttributeSetArray', 'AttributeSet', :class => AttributeSet, :default_value => []
     class AttributeRecommendations
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AttributeRecommendations'
       array_node :attribute_sets, 'AttributeSetArray', 'AttributeSet', :class => AttributeSet, :default_value => []

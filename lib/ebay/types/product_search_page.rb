@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  array_node :sort_characteristics, 'SortCharacteristics', :class => Characteristic, :default_value => []
     #  array_node :data_element_sets, 'DataElementSet', :class => DataElementSet, :default_value => []
     class ProductSearchPage
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ProductSearchPage'
       object_node :search_characteristics_set, 'SearchCharacteristicsSet', :class => CharacteristicsSet, :optional => true

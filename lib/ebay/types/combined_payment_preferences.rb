@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :combined_payment_period, 'CombinedPaymentPeriod', :optional => true
     #  object_node :flat_shipping_preferences, 'FlatShippingPreferences', :class => FlatShippingPreferences, :optional => true
     class CombinedPaymentPreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CombinedPaymentPreferences'
       object_node :calculated_shipping_preferences, 'CalculatedShippingPreferences', :class => CalculatedShippingPreferences, :optional => true

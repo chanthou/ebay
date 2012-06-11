@@ -38,7 +38,7 @@ module Ebay # :nodoc:
     #  money_node :refund_amount, 'RefundAmount', :optional => true
     #  text_node :refund_status, 'RefundStatus', :optional => true
     class SellingManagerSoldOrder
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerSoldOrder'
       array_node :selling_manager_sold_transactions, 'SellingManagerSoldTransaction', :class => SellingManagerSoldTransaction, :default_value => []

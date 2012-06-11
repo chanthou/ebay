@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  text_node :variation_specifics, 'VariationSpecifics', :optional => true
     #  text_node :value_format, 'ValueFormat', :optional => true
     class RecommendationValidationRules
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RecommendationValidationRules'
       text_node :value_type, 'ValueType', :optional => true

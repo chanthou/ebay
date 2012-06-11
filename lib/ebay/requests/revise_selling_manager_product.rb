@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :deleted_field, 'DeletedField', :optional => true
     #  object_node :selling_manager_product_specifics, 'SellingManagerProductSpecifics', :class => SellingManagerProductSpecifics, :optional => true
     class ReviseSellingManagerProduct < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseSellingManagerProductRequest'
       object_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails, :optional => true

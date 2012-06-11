@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  boolean_node :seller_profile_opted_in, 'SellerProfileOptedIn', 'true', 'false', :optional => true
     #  array_node :supported_seller_profiles, 'SupportedSellerProfiles', 'SupportedSellerProfile', :class => SupportedSellerProfile, :default_value => []
     class SellerProfilePreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerProfilePreferences'
       boolean_node :seller_profile_opted_in, 'SellerProfileOptedIn', 'true', 'false', :optional => true

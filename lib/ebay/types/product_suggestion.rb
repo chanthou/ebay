@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :stock_photo, 'StockPhoto', :optional => true
     #  boolean_node :recommended, 'Recommended', 'true', 'false', :optional => true
     class ProductSuggestion
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ProductSuggestion'
       text_node :title, 'Title', :optional => true

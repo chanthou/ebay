@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :product_state, 'ProductState', :optional => true
     #  text_node :product_info_id, '@productInfoID', :optional => true
     class ProductInfo
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ProductInfo'
       money_node :average_start_price, 'AverageStartPrice', :optional => true

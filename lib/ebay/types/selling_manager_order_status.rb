@@ -19,7 +19,7 @@ module Ebay # :nodoc:
     #  time_node :seller_invoice_time, 'SellerInvoiceTime', :optional => true
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
     class SellingManagerOrderStatus
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerOrderStatus'
       text_node :checkout_status, 'CheckoutStatus', :optional => true

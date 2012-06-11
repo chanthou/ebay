@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  text_node :sale_template_name, 'SaleTemplateName', :optional => true
     #  object_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails, :optional => true
     class ReviseSellingManagerTemplate < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseSellingManagerTemplateResponse'
       numeric_node :sale_template_id, 'SaleTemplateID', :optional => true

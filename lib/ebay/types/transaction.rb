@@ -68,7 +68,7 @@ module Ebay # :nodoc:
     #  money_node :refund_amount, 'RefundAmount', :optional => true
     #  text_node :refund_status, 'RefundStatus', :optional => true
     class Transaction
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Transaction'
       money_node :amount_paid, 'AmountPaid', :optional => true

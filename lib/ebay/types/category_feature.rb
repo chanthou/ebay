@@ -122,7 +122,7 @@ module Ebay # :nodoc:
     #  text_node :compatible_vehicle_type, 'CompatibleVehicleType', :optional => true
     #  text_node :payment_options_group, 'PaymentOptionsGroup', :optional => true
     class CategoryFeature
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CategoryFeature'
       text_node :category_id, 'CategoryID', :optional => true

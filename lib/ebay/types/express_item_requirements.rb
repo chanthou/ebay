@@ -21,7 +21,7 @@ module Ebay # :nodoc:
     #  boolean_node :ship_from_eligible_country, 'ShipFromEligibleCountry', 'true', 'false', :optional => true
     #  boolean_node :paypal_account_accepts_unconfirmed_address, 'PayPalAccountAcceptsUnconfirmedAddress', 'true', 'false', :optional => true
     class ExpressItemRequirements
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ExpressItemRequirements'
       boolean_node :seller_express_eligible, 'SellerExpressEligible', 'true', 'false', :optional => true

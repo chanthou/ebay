@@ -22,7 +22,7 @@ module Ebay # :nodoc:
     #  boolean_node :feedback_revised, 'FeedbackRevised', 'true', 'false', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class FeedbackDetail
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'FeedbackDetail'
       text_node :commenting_user, 'CommentingUser', :optional => true

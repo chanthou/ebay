@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  numeric_node :data_element_id, 'DataElementID', :optional => true
     #  numeric_node :attribute_set_id, '@attributeSetID', :optional => true
     class DataElementSet
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'DataElementSet'
       text_node :data_element, 'DataElement', :optional => true

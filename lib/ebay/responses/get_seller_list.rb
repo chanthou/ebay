@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  numeric_node :returned_item_count_actual, 'ReturnedItemCountActual', :optional => true
     #  object_node :seller, 'Seller', :class => User, :optional => true
     class GetSellerList < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellerListResponse'
       object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true

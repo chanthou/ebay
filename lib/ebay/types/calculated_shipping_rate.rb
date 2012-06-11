@@ -15,7 +15,7 @@ module Ebay # :nodoc:
     #  object_node :weight_minor, 'WeightMinor', :class => Measure, :optional => true
     #  money_node :international_packaging_handling_costs, 'InternationalPackagingHandlingCosts', :optional => true
     class CalculatedShippingRate
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CalculatedShippingRate'
       text_node :originating_postal_code, 'OriginatingPostalCode', :optional => true

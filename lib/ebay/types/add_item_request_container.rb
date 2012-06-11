@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  object_node :item, 'Item', :class => Item, :optional => true
     #  text_node :message_id, 'MessageID', :optional => true
     class AddItemRequestContainer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddItemRequestContainer'
       object_node :item, 'Item', :class => Item, :optional => true

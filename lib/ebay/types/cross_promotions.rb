@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  text_node :store_name, 'StoreName', :optional => true
     #  array_node :promoted_items, 'PromotedItem', :class => PromotedItem, :default_value => []
     class CrossPromotions
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CrossPromotions'
       text_node :item_id, 'ItemID', :optional => true

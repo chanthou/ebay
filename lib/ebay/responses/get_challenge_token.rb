@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :image_challenge_url, 'ImageChallengeURL', :optional => true
     #  text_node :audio_challenge_url, 'AudioChallengeURL', :optional => true
     class GetChallengeToken < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetChallengeTokenResponse'
       text_node :challenge_token, 'ChallengeToken', :optional => true

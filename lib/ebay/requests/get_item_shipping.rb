@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :destination_postal_code, 'DestinationPostalCode', :optional => true
     #  text_node :destination_country_code, 'DestinationCountryCode', :optional => true
     class GetItemShipping < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetItemShippingRequest'
       text_node :item_id, 'ItemID', :optional => true

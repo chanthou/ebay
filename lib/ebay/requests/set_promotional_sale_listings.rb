@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  boolean_node :all_store_inventory_items, 'AllStoreInventoryItems', 'true', 'false', :optional => true
     #  boolean_node :all_auction_items, 'AllAuctionItems', 'true', 'false', :optional => true
     class SetPromotionalSaleListings < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SetPromotionalSaleListingsRequest'
       numeric_node :promotional_sale_id, 'PromotionalSaleID', :optional => true

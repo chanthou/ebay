@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :vat_site, 'VATSite', :optional => true
     #  text_node :vatid, 'VATID', :optional => true
     class VATDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'VATDetails'
       boolean_node :business_seller, 'BusinessSeller', 'true', 'false', :optional => true

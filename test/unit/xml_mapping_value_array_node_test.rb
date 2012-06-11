@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 module TestModule
   class Widget
-    include XML::Mapping
+    include XMLMappingTranslation
     value_array_node :names, 'Names', 'Name', :default_value => []
   end
 

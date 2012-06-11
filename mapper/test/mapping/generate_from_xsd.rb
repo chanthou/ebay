@@ -15,7 +15,7 @@ class GenerateFromXSDTest < Test::Unit::TestCase
 module Ebay
   module Mapping
     class AbstractResponse
-      include XML::Mapping
+      include XMLMappingTranslation
       text_node :correlation_id, "CorrelationID"
       text_node :message, "Message"
       text_node :version, "Version"

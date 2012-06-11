@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :period, 'Period', :optional => true
     #  text_node :description, 'Description', :optional => true
     class PolicyViolationDurationDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PolicyViolationDurationDetails'
       text_node :period, 'Period', :optional => true

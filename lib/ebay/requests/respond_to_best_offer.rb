@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  money_node :counter_offer_price, 'CounterOfferPrice', :optional => true
     #  numeric_node :counter_offer_quantity, 'CounterOfferQuantity', :optional => true
     class RespondToBestOffer < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RespondToBestOfferRequest'
       text_node :item_id, 'ItemID', :optional => true

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :logos, 'Logo', :class => StoreLogo, :default_value => []
     class StoreLogoArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreLogoArray'
       array_node :logos, 'Logo', :class => StoreLogo, :default_value => []

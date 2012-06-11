@@ -16,7 +16,7 @@ module Ebay # :nodoc:
     #  text_node :warning_level, 'WarningLevel', :optional => true
     #  object_node :bot_block, 'BotBlock', :class => BotBlockRequest, :optional => true
     class Abstract < Base
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AbstractRequest'
       value_array_node :detail_levels, 'DetailLevel', :default_value => []

@@ -3,7 +3,7 @@ module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
     class GeteBayOfficialTime < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GeteBayOfficialTimeResponse'
     end

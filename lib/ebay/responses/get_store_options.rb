@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  numeric_node :max_categories, 'MaxCategories', :optional => true
     #  numeric_node :max_category_levels, 'MaxCategoryLevels', :optional => true
     class GetStoreOptions < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetStoreOptionsResponse'
       object_node :basic_themes, 'BasicThemeArray', :class => StoreThemeArray, :optional => true

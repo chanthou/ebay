@@ -15,7 +15,7 @@ module Ebay # :nodoc:
     #  numeric_node :number_of_days, 'NumberOfDays', :optional => true
     #  boolean_node :include_final_value_fee, 'IncludeFinalValueFee', 'true', 'false', :optional => true
     class GetOrders < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetOrdersRequest'
       value_array_node :order_ids, 'OrderIDArray', 'OrderID', :default_value => []

@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  value_array_node :feature_ids, 'FeatureID', :default_value => []
     #  boolean_node :all_features_for_category, 'AllFeaturesForCategory', 'true', 'false', :optional => true
     class GetCategoryFeatures < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetCategoryFeaturesRequest'
       text_node :category_id, 'CategoryID', :optional => true

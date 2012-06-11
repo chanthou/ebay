@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :color_schemes, 'ColorScheme', :class => StoreColorScheme, :default_value => []
     class StoreColorSchemeArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreColorSchemeArray'
       array_node :color_schemes, 'ColorScheme', :class => StoreColorScheme, :default_value => []

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :picture_manager_details, 'PictureManagerDetails', :class => PictureManagerDetails, :optional => true
     class GetPictureManagerDetails < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetPictureManagerDetailsResponse'
       object_node :picture_manager_details, 'PictureManagerDetails', :class => PictureManagerDetails, :optional => true

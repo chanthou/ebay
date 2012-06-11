@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  text_node :category2_id, 'Category2ID', :optional => true
     #  value_array_node :discount_reasons, 'DiscountReason', :default_value => []
     class VerifyAddFixedPriceItem < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'VerifyAddFixedPriceItemResponse'
       text_node :item_id, 'ItemID', :optional => true

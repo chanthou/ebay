@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :status, 'Status', :optional => true
     class SearchStandingDashboard
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SearchStandingDashboard'
       text_node :status, 'Status', :optional => true

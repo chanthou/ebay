@@ -15,7 +15,7 @@ end
     #  object_node :best_offer_details, 'BestOfferDetails', :class => BestOfferDetails, :optional => true
     #  numeric_node :listing_hold_inventory_level, 'ListingHoldInventoryLevel', :optional => true
     class SellingManagerAutoRelist
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerAutoRelist'
       text_node :type, 'Type', :optional => true

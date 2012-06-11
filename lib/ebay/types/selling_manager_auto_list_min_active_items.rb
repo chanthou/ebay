@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  numeric_node :spacing_interval_in_minutes, 'SpacingIntervalInMinutes', :optional => true
     #  numeric_node :listing_hold_inventory_level, 'ListingHoldInventoryLevel', :optional => true
     class SellingManagerAutoListMinActiveItems
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerAutoListMinActiveItems'
       numeric_node :min_active_item_count, 'MinActiveItemCount', :optional => true

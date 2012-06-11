@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :quantity, '', :optional => true
     class Quantity
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Quantity'
       numeric_node :quantity, '', :optional => true

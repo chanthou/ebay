@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  object_node :weight_off, 'WeightOff', :class => Measure, :optional => true
     #  text_node :mapped_discount_profile_id, 'MappedDiscountProfileID', :optional => true
     class DiscountProfile
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'DiscountProfile'
       text_node :discount_profile_id, 'DiscountProfileID', :optional => true

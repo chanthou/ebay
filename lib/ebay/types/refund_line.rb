@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  
     class RefundLine
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RefundLine'
       

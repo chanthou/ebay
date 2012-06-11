@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :shipping_cost_paid_by_option, 'ShippingCostPaidByOption', :optional => true
     #  text_node :description, 'Description', :optional => true
     class ShippingCostPaidByDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ShippingCostPaidByDetails'
       text_node :shipping_cost_paid_by_option, 'ShippingCostPaidByOption', :optional => true

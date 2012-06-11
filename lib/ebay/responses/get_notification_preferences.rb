@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  object_node :user_data, 'UserData', :class => NotificationUserData, :optional => true
     #  array_node :event_properties, 'EventProperty', :class => NotificationEventProperty, :default_value => []
     class GetNotificationPreferences < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetNotificationPreferencesResponse'
       object_node :application_delivery_preferences, 'ApplicationDeliveryPreferences', :class => ApplicationDeliveryPreferences, :optional => true

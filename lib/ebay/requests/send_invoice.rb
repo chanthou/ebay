@@ -21,7 +21,7 @@ module Ebay # :nodoc:
     #  text_node :sku, 'SKU', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class SendInvoice < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SendInvoiceRequest'
       text_node :item_id, 'ItemID', :optional => true

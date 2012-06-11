@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :folder_id, 'FolderID', :optional => true
     class AddSellingManagerInventoryFolder < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddSellingManagerInventoryFolderResponse'
       numeric_node :folder_id, 'FolderID', :optional => true

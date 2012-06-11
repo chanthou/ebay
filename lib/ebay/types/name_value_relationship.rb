@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :parent_name, 'ParentName', :optional => true
     #  text_node :parent_value, 'ParentValue', :optional => true
     class NameValueRelationship
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'NameValueRelationship'
       text_node :parent_name, 'ParentName', :optional => true

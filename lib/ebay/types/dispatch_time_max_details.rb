@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :detail_version, 'DetailVersion', :optional => true
     #  time_node :update_time, 'UpdateTime', :optional => true
     class DispatchTimeMaxDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'DispatchTimeMaxDetails'
       numeric_node :dispatch_time_max, 'DispatchTimeMax', :optional => true

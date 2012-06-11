@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  money_node :total_tax_amount, 'TotalTaxAmount', :optional => true
     #  money_node :total_amount, 'TotalAmount', :optional => true
     class CheckoutOrderDetail
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CheckoutOrderDetail'
       money_node :total_cart_merchandise_cost, 'TotalCartMerchandiseCost', :optional => true

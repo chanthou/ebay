@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :attribute_set_version, 'AttributeSetVersion', :optional => true
     #  array_node :characteristics, 'Characteristics', :class => Characteristic, :default_value => []
     class CharacteristicsSet
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CharacteristicsSet'
       text_node :name, 'Name', :optional => true

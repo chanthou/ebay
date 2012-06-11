@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  time_node :last_modified_time, 'LastModifiedTime', :optional => true
     #  boolean_node :motor_vehicles, 'MotorVehicles', 'true', 'false', :optional => true
     class GetDescriptionTemplates < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetDescriptionTemplatesRequest'
       text_node :category_id, 'CategoryID', :optional => true

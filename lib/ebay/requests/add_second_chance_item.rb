@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :item_id, 'ItemID', :optional => true
     #  text_node :seller_message, 'SellerMessage', :optional => true
     class AddSecondChanceItem < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddSecondChanceItemRequest'
       text_node :recipient_bidder_user_id, 'RecipientBidderUserID', :optional => true

@@ -14,7 +14,7 @@ module Ebay # :nodoc:
     #  boolean_node :include_variation_specifics, 'IncludeVariationSpecifics', 'true', 'false', :optional => true
     #  boolean_node :hide_variations, 'HideVariations', 'true', 'false', :optional => true
     class GetSellerEvents < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellerEventsRequest'
       text_node :user_id, 'UserID', :optional => true

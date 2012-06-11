@@ -27,7 +27,7 @@ module Ebay # :nodoc:
     #  boolean_node :purchase_protection, 'PurchaseProtection', 'true', 'false', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class Dispute
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Dispute'
       text_node :dispute_id, 'DisputeID', :optional => true

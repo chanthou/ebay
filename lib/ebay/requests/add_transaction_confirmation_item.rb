@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  text_node :item_id, 'ItemID'
     #  text_node :comments, 'Comments'
     class AddTransactionConfirmationItem < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddTransactionConfirmationItemRequest'
       text_node :recipient_user_id, 'RecipientUserID'

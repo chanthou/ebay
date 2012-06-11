@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  object_node :automated_second_chance_offer_rule, 'AutomatedSecondChanceOfferRule', :class => SellingManagerAutoSecondChanceOffer, :optional => true
     #  array_node :fees, 'Fees', 'Fee', :class => Fee, :default_value => []
     class SetSellingManagerTemplateAutomationRule < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SetSellingManagerTemplateAutomationRuleResponse'
       object_node :automated_listing_rule, 'AutomatedListingRule', :class => SellingManagerAutoList, :optional => true

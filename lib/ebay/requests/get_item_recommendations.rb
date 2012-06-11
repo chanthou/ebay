@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :get_recommendations_request_containers, 'GetRecommendationsRequestContainer', :class => GetRecommendationsRequestContainer, :default_value => []
     class GetItemRecommendations < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetItemRecommendationsRequest'
       array_node :get_recommendations_request_containers, 'GetRecommendationsRequestContainer', :class => GetRecommendationsRequestContainer, :default_value => []

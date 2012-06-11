@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :range_specifier, 'RangeSpecifier', :optional => true
     #  array_node :value_lists, 'ValueList', :class => Val, :default_value => []
     class SearchAttributes
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SearchAttributes'
       numeric_node :attribute_id, 'AttributeID'

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :product_info, 'ProductInfo', :class => ProductInfo, :optional => true
     class PricingRecommendations
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PricingRecommendations'
       object_node :product_info, 'ProductInfo', :class => ProductInfo, :optional => true

@@ -8,13 +8,13 @@ class EbayTest < Test::Unit::TestCase
     request = GeteBayOfficialTime.new(:detail_level => 'ReturnAll')
     assert_equal 'ReturnAll', request.detail_level
     assert_equal ['ReturnAll'], request.detail_levels
-    assert_equal desired, request.save_to_xml.to_s
+    assert_xml_equal desired, request.to_xml
   end
   
   def test_set_detail_level_with_string
     desired = '<GeteBayOfficialTimeRequest><DetailLevel>ReturnAll</DetailLevel><DetailLevel>None</DetailLevel><RequesterCredentials/></GeteBayOfficialTimeRequest>'
     request = GeteBayOfficialTime.new(:detail_levels => [ 'ReturnAll', 'None' ])
     assert_equal [ 'ReturnAll', 'None' ], request.detail_levels
-    assert_equal desired, request.save_to_xml.to_s
+    assert_xml_equal desired, request.to_xml
   end
 end	

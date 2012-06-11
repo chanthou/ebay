@@ -15,7 +15,7 @@ module Ebay # :nodoc:
     #  object_node :maximum_unpaid_item_strikes_info, 'MaximumUnpaidItemStrikesInfo', :class => MaximumUnpaidItemStrikesInfo, :optional => true
     #  object_node :maximum_buyer_policy_violations, 'MaximumBuyerPolicyViolations', :class => MaximumBuyerPolicyViolations, :optional => true
     class BuyerRequirementDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BuyerRequirementDetails'
       boolean_node :ship_to_registration_country, 'ShipToRegistrationCountry', 'true', 'false', :optional => true

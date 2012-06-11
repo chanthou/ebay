@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  object_node :best_offer, 'BestOffer', :class => BestOffer, :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class PlaceOffer < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PlaceOfferResponse'
       object_node :selling_status, 'SellingStatus', :class => SellingStatus, :optional => true

@@ -35,7 +35,7 @@ module Ebay # :nodoc:
     #  text_node :phone2, 'Phone2', :optional => true
     #  text_node :address_usage, 'AddressUsage', :optional => true
     class Address
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Address'
       text_node :name, 'Name', :optional => true

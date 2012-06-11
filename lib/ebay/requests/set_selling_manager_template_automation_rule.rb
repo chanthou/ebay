@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  object_node :automated_relisting_rule, 'AutomatedRelistingRule', :class => SellingManagerAutoRelist, :optional => true
     #  object_node :automated_second_chance_offer_rule, 'AutomatedSecondChanceOfferRule', :class => SellingManagerAutoSecondChanceOffer, :optional => true
     class SetSellingManagerTemplateAutomationRule < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SetSellingManagerTemplateAutomationRuleRequest'
       numeric_node :sale_template_id, 'SaleTemplateID', :optional => true

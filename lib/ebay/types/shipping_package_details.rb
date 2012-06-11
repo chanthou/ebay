@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :detail_version, 'DetailVersion', :optional => true
     #  time_node :update_time, 'UpdateTime', :optional => true
     class ShippingPackageDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ShippingPackageDetails'
       numeric_node :package_id, 'PackageID', :optional => true

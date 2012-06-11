@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :name_recommendations, 'NameRecommendation', :class => NameRecommendation, :default_value => []
     #  boolean_node :updated, 'Updated', 'true', 'false', :optional => true
     class Recommendations
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Recommendations'
       text_node :category_id, 'CategoryID', :optional => true

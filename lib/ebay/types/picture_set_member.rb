@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  numeric_node :picture_height, 'PictureHeight', :optional => true
     #  numeric_node :picture_width, 'PictureWidth', :optional => true
     class PictureSetMember
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PictureSetMember'
       text_node :member_url, 'MemberURL', :optional => true

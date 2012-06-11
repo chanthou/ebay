@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  object_node :seller_return_profile, 'SellerReturnProfile', :class => SellerReturnProfile, :optional => true
     #  object_node :seller_payment_profile, 'SellerPaymentProfile', :class => SellerPaymentProfile, :optional => true
     class SellerProfiles
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerProfiles'
       object_node :seller_shipping_profile, 'SellerShippingProfile', :class => SellerShippingProfile, :optional => true

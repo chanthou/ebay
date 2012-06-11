@@ -16,7 +16,7 @@ module Ebay # :nodoc:
     #  object_node :buying_guide_details, 'BuyingGuideDetails', :class => BuyingGuideDetails, :optional => true
     #  boolean_node :duplicate_items, 'DuplicateItems', 'true', 'false', :optional => true
     class GetProducts < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetProductsResponse'
       array_node :characteristics_set_product_histograms, 'CharacteristicsSetProductHistogram', 'HistogramEntry', :class => HistogramEntry, :default_value => []

@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :refund_message, 'RefundMessage', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class IssueRefund < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'IssueRefundRequest'
       text_node :item_id, 'ItemID', :optional => true

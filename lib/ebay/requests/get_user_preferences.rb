@@ -17,7 +17,7 @@ module Ebay # :nodoc:
     #  boolean_node :show_unpaid_item_assistance_exclusion_list, 'ShowUnpaidItemAssistanceExclusionList', 'true', 'false', :optional => true
     #  boolean_node :show_seller_profile_preferences, 'ShowSellerProfilePreferences', 'true', 'false'
     class GetUserPreferences < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetUserPreferencesRequest'
       boolean_node :show_bidder_notice_preferences, 'ShowBidderNoticePreferences', 'true', 'false'

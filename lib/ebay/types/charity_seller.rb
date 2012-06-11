@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :charity_affiliations, 'CharityAffiliation', :class => CharityAffiliation, :default_value => []
     #  boolean_node :terms_and_conditions_accepted, 'TermsAndConditionsAccepted', 'true', 'false', :optional => true
     class CharitySeller
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CharitySeller'
       text_node :charity_seller_status, 'CharitySellerStatus', :optional => true

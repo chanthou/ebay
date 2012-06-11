@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  boolean_node :display_message_store_custom_text, 'DisplayMessageStoreCustomText', 'true', 'false', :optional => true
     #  text_node :message_store_custom_text, 'MessageStoreCustomText', :optional => true
     class StoreVacationPreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreVacationPreferences'
       boolean_node :on_vacation, 'OnVacation', 'true', 'false', :optional => true

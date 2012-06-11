@@ -174,7 +174,7 @@ module Ebay # :nodoc:
     #  money_node :floor_price, 'FloorPrice', :optional => true
     #  money_node :ceiling_price, 'CeilingPrice', :optional => true
     class Item
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Item'
       text_node :application_data, 'ApplicationData', :optional => true

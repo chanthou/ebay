@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :deleted_sale_template_id, 'DeletedSaleTemplateID', :optional => true
     #  text_node :deleted_sale_template_name, 'DeletedSaleTemplateName', :optional => true
     class DeleteSellingManagerTemplate < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'DeleteSellingManagerTemplateResponse'
       text_node :deleted_sale_template_id, 'DeletedSaleTemplateID', :optional => true

@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  numeric_node :number_of_days, 'NumberOfDays', :optional => true
     #  text_node :inventory_tracking_method, 'InventoryTrackingMethod', :optional => true
     class GetSellerTransactions < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellerTransactionsRequest'
       time_node :mod_time_from, 'ModTimeFrom', :optional => true

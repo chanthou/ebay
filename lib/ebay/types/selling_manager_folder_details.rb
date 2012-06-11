@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  array_node :child_folders, 'ChildFolder', :class => SellingManagerFolderDetails, :default_value => []
     #  time_node :creation_time, 'CreationTime', :optional => true
     class SellingManagerFolderDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerFolderDetails'
       numeric_node :folder_id, 'FolderID', :optional => true

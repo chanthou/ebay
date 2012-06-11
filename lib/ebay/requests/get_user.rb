@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  boolean_node :include_express_requirements, 'IncludeExpressRequirements', 'true', 'false', :optional => true
     #  boolean_node :include_feature_eligibility, 'IncludeFeatureEligibility', 'true', 'false', :optional => true
     class GetUser < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetUserRequest'
       text_node :item_id, 'ItemID', :optional => true

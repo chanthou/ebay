@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :dispute_id, 'DisputeID', :optional => true
     class AddDispute < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddDisputeResponse'
       text_node :dispute_id, 'DisputeID', :optional => true

@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  time_node :start_creation_time, 'StartCreationTime', :optional => true
     #  time_node :end_creation_time, 'EndCreationTime', :optional => true
     class GetAdFormatLeads < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetAdFormatLeadsRequest'
       text_node :item_id, 'ItemID', :optional => true

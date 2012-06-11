@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  numeric_node :duration_in_days, 'DurationInDays', :optional => true
     #  boolean_node :include, 'Include', 'true', 'false', :optional => true
     class ReminderCustomization
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReminderCustomization'
       numeric_node :duration_in_days, 'DurationInDays', :optional => true

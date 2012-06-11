@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  text_node :status, 'Status', :optional => true
     #  boolean_node :charity_listing, 'CharityListing', 'true', 'false', :optional => true
     class Charity
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Charity'
       text_node :charity_name, 'CharityName', :optional => true

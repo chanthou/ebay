@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :warranty_duration_option, 'WarrantyDurationOption', :optional => true
     #  text_node :description, 'Description', :optional => true
     class WarrantyDurationDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'WarrantyDurationDetails'
       text_node :warranty_duration_option, 'WarrantyDurationOption', :optional => true

@@ -118,18 +118,6 @@ end
         result
       end
     end
-    
-    class ValueNode < Node
-      def class_name
-        clean_class_name(@type)
-      end
-      
-      def to_s
-        result = "#{declaration}, '#{@name}', :class => #{class_name}"
-        result << ', :optional => true' if @min == '0'
-        result
-      end
-    end
 
     class ObjectNode < Node
       def class_name

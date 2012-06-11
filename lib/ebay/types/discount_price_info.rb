@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  boolean_node :sold_off_ebay, 'SoldOffeBay', 'true', 'false', :optional => true
     #  money_node :made_for_outlet_comparison_price, 'MadeForOutletComparisonPrice', :optional => true
     class DiscountPriceInfo
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'DiscountPriceInfo'
       money_node :original_retail_price, 'OriginalRetailPrice', :optional => true

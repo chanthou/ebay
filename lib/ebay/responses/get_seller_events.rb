@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  time_node :time_to, 'TimeTo', :optional => true
     #  array_node :items, 'ItemArray', 'Item', :class => Item, :default_value => []
     class GetSellerEvents < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellerEventsResponse'
       time_node :time_to, 'TimeTo', :optional => true

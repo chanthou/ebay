@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  boolean_node :valid_token, 'ValidToken', 'true', 'false', :optional => true
     class ValidateChallengeInput < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ValidateChallengeInputResponse'
       boolean_node :valid_token, 'ValidToken', 'true', 'false', :optional => true

@@ -19,7 +19,7 @@ module Ebay # :nodoc:
     #  text_node :shipping_cost_paid_by_option, 'ShippingCostPaidByOption', :optional => true
     #  text_node :shipping_cost_paid_by, 'ShippingCostPaidBy', :optional => true
     class ReturnPolicy
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReturnPolicy'
       text_node :refund_option, 'RefundOption', :optional => true

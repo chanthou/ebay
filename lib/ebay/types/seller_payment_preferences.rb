@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  text_node :fed_ex_rate_option, 'FedExRateOption', :optional => true
     #  text_node :usps_rate_option, 'USPSRateOption', :optional => true
     class SellerPaymentPreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerPaymentPreferences'
       boolean_node :always_use_this_payment_address, 'AlwaysUseThisPaymentAddress', 'true', 'false', :optional => true

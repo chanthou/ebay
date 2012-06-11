@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :cross_promotion, 'CrossPromotion', :class => CrossPromotions, :optional => true
     class GetCrossPromotions < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetCrossPromotionsResponse'
       object_node :cross_promotion, 'CrossPromotion', :class => CrossPromotions, :optional => true

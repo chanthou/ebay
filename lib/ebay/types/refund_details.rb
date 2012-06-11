@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :refund_option, 'RefundOption', :optional => true
     #  text_node :description, 'Description', :optional => true
     class RefundDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RefundDetails'
       text_node :refund_option, 'RefundOption', :optional => true

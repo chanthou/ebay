@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  object_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails, :optional => true
     #  array_node :fees, 'Fees', 'Fee', :class => Fee, :default_value => []
     class AddSellingManagerTemplate < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddSellingManagerTemplateResponse'
       numeric_node :category_id, 'CategoryID', :optional => true

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :name, 'Name', :optional => true
     #  text_node :value, 'Value', :optional => true
     class LookupAttribute
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'LookupAttribute'
       text_node :name, 'Name', :optional => true

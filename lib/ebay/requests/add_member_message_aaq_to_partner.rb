@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :item_id, 'ItemID', :optional => true
     #  object_node :member_message, 'MemberMessage', :class => MemberMessage, :optional => true
     class AddMemberMessageAAQToPartner < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddMemberMessageAAQToPartnerRequest'
       text_node :item_id, 'ItemID', :optional => true

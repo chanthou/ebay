@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :attribute_system_version, 'AttributeSystemVersion', :optional => true
     #  array_node :site_wide_characteristic_sets, 'SiteWideCharacteristicSets', :class => SiteWideCharacteristics, :default_value => []
     class GetCategory2CS < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetCategory2CSResponse'
       array_node :mapped_categories, 'MappedCategoryArray', 'Category', :class => Category, :default_value => []

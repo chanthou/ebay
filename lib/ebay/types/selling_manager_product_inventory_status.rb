@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  numeric_node :success_percent, 'SuccessPercent', :optional => true
     #  money_node :average_selling_price, 'AverageSellingPrice', :optional => true
     class SellingManagerProductInventoryStatus
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerProductInventoryStatus'
       numeric_node :quantity_scheduled, 'QuantityScheduled', :optional => true

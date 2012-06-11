@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :name, 'Name', :optional => true
     #  boolean_node :visible, 'visible', 'true', 'false', :optional => true
     class Label
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Label'
       text_node :name, 'Name', :optional => true

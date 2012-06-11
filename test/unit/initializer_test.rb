@@ -1,20 +1,20 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class Auction
-  include XML::Mapping
+  include XMLMappingTranslation
   include Ebay::Initializer
   attr_accessor :name, :duration
 end
 
 class Anvil
-  include XML::Mapping
+  include XMLMappingTranslation
   include Ebay::Initializer
-
+  
   text_node :name, 'name'
 end
 
 class Toolbox
-  include XML::Mapping
+  include XMLMappingTranslation
   include Ebay::Initializer
   
   text_node :size, 'size'  
@@ -36,12 +36,11 @@ class BaseObjectTest < Test::Unit::TestCase
   def test_child_with_xml_mapping
     anvil = Anvil.new(:name => 'Super')
     assert_equal 'Super', anvil.name
-    assert_equal '<anvil><name>Super</name></anvil>', anvil.save_to_xml.to_s
+    assert_xml_equal '<anvil><name>Super</name></anvil>', anvil.to_xml
   end 
-
+  
   def test_load_from_xml
-    xml = REXML::Document.new('<anvil><name>Super</name></anvil>')
-    anvil = Anvil.load_from_xml(xml.root)
+    anvil = Anvil.parse('<anvil><name>Super</name></anvil>')
     assert_equal 'Super', anvil.name
   end
 
@@ -50,7 +49,7 @@ class BaseObjectTest < Test::Unit::TestCase
     assert_equal 'Huge', toolbox.size
     assert_instance_of Anvil, toolbox.tool
     assert_equal 'Mine', toolbox.tool.name
-    assert_equal '<toolbox><size>Huge</size><tool><name>Mine</name></tool></toolbox>', toolbox.save_to_xml.to_s
+    assert_xml_equal '<toolbox><size>Huge</size><tool><name>Mine</name></tool></toolbox>', toolbox.to_xml
   end
 
   def test_yield_with_block
@@ -78,7 +77,7 @@ class ItemInitializationTest < Test::Unit::TestCase
                       :country => 'US',
                       :currency => 'USD'
                      ) 
-      item.save_to_xml
+      item.to_xml
     end
   end
 end

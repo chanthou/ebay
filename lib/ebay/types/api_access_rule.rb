@@ -19,7 +19,7 @@ module Ebay # :nodoc:
     #  text_node :rule_current_status, 'RuleCurrentStatus', :optional => true
     #  text_node :rule_status, 'RuleStatus', :optional => true
     class ApiAccessRule
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ApiAccessRule'
       text_node :call_name, 'CallName', :optional => true

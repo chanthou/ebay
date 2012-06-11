@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :promotional_sale_details, 'PromotionalSaleDetails', 'PromotionalSale', :class => PromotionalSale, :default_value => []
     class GetPromotionalSaleDetails < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetPromotionalSaleDetailsResponse'
       array_node :promotional_sale_details, 'PromotionalSaleDetails', 'PromotionalSale', :class => PromotionalSale, :default_value => []

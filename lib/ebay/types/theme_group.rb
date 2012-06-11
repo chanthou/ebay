@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  numeric_node :theme_id, 'ThemeID', :optional => true
     #  numeric_node :theme_total, 'ThemeTotal', :optional => true
     class ThemeGroup
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ThemeGroup'
       numeric_node :group_id, 'GroupID', :optional => true

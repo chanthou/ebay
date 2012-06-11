@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  numeric_node :average_rating, 'AverageRating', :optional => true
     #  array_node :reviews, 'Review', :class => Review, :default_value => []
     class ReviewDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviewDetails'
       numeric_node :average_rating, 'AverageRating', :optional => true

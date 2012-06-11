@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :ship_to_location, 'ShipToLocation', :optional => true
     #  money_node :shipping_insurance_cost, 'ShippingInsuranceCost', :optional => true
     class InternationalShippingServiceOptions
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'InternationalShippingServiceOptions'
       text_node :shipping_service, 'ShippingService', :optional => true

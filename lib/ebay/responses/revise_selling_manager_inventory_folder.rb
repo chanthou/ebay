@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :folder, 'Folder', :class => SellingManagerFolderDetails, :optional => true
     class ReviseSellingManagerInventoryFolder < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseSellingManagerInventoryFolderResponse'
       object_node :folder, 'Folder', :class => SellingManagerFolderDetails, :optional => true

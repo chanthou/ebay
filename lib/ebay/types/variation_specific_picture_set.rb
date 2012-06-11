@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :gallery_url, 'GalleryURL', :optional => true
     #  text_node :external_picture_url, 'ExternalPictureURL', :optional => true
     class VariationSpecificPictureSet
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'VariationSpecificPictureSet'
       text_node :variation_specific_value, 'VariationSpecificValue', :optional => true

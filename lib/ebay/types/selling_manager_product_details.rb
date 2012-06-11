@@ -14,7 +14,7 @@ module Ebay # :nodoc:
     #  object_node :vendor_info, 'VendorInfo', :class => SellingManagerVendorDetails, :optional => true
     #  text_node :note, 'Note', :optional => true
     class SellingManagerProductDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerProductDetails'
       text_node :product_name, 'ProductName', :optional => true

@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :rights_owner_id, 'RightsOwnerID', :optional => true
     #  array_node :report_items, 'ReportItems', 'ReportItem', :class => VeROReportItem, :default_value => []
     class VeROReportItems < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'VeROReportItemsRequest'
       text_node :rights_owner_id, 'RightsOwnerID', :optional => true

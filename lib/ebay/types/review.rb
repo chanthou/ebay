@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :user_id, 'UserID', :optional => true
     #  time_node :creation_time, 'CreationTime', :optional => true
     class Review
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Review'
       text_node :url, 'URL', :optional => true

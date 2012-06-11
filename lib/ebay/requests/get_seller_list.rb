@@ -18,7 +18,7 @@ module Ebay # :nodoc:
     #  numeric_node :category_id, 'CategoryID', :optional => true
     #  boolean_node :include_variations, 'IncludeVariations', 'true', 'false', :optional => true
     class GetSellerList < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellerListRequest'
       text_node :user_id, 'UserID', :optional => true

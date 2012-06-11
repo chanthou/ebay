@@ -14,7 +14,7 @@ module Ebay # :nodoc:
     #  text_node :transaction_id, 'TransactionID', :optional => true
     #  boolean_node :include_item_compatibility_list, 'IncludeItemCompatibilityList', 'true', 'false', :optional => true
     class GetItem < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetItemRequest'
       text_node :item_id, 'ItemID', :optional => true

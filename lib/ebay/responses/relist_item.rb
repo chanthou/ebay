@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  value_array_node :discount_reasons, 'DiscountReason', :default_value => []
     #  array_node :product_suggestions, 'ProductSuggestions', 'ProductSuggestion', :class => ProductSuggestion, :default_value => []
     class RelistItem < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RelistItemResponse'
       text_node :item_id, 'ItemID', :optional => true

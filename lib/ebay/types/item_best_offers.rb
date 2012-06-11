@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  array_node :best_offers, 'BestOfferArray', 'BestOffer', :class => BestOffer, :default_value => []
     #  object_node :item, 'Item', :class => Item, :optional => true
     class ItemBestOffers
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ItemBestOffers'
       text_node :role, 'Role', :optional => true

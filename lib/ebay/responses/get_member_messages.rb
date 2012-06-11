@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true
     #  boolean_node :has_more_items, 'HasMoreItems', 'true', 'false', :optional => true
     class GetMemberMessages < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMemberMessagesResponse'
       array_node :member_messages, 'MemberMessage', 'MemberMessageExchange', :class => MemberMessageExchange, :default_value => []

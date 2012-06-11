@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  money_node :max_price, 'MaxPrice', :optional => true
     #  value_array_node :favorite_item_ids, 'FavoriteItemID', :default_value => []
     class SellerFavoriteItemPreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerFavoriteItemPreferences'
       text_node :search_keywords, 'SearchKeywords', :optional => true

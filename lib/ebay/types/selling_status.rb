@@ -21,7 +21,7 @@ module Ebay # :nodoc:
     #  boolean_node :admin_ended, 'AdminEnded', 'true', 'false', :optional => true
     #  boolean_node :sold_as_bin, 'SoldAsBin', 'true', 'false', :optional => true
     class SellingStatus
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingStatus'
       numeric_node :bid_count, 'BidCount', :optional => true

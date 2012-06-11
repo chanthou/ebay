@@ -14,7 +14,7 @@ module Ebay # :nodoc:
     #  boolean_node :free_shipping, 'FreeShipping', 'true', 'false', :optional => true
     #  boolean_node :local_pickup, 'LocalPickup', 'true', 'false', :optional => true
     class ShippingServiceOptions
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ShippingServiceOptions'
       money_node :shipping_insurance_cost, 'ShippingInsuranceCost', :optional => true

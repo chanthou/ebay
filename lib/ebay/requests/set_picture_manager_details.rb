@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  object_node :picture_manager_details, 'PictureManagerDetails', :class => PictureManagerDetails, :optional => true
     #  text_node :action, 'Action', :optional => true
     class SetPictureManagerDetails < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SetPictureManagerDetailsRequest'
       object_node :picture_manager_details, 'PictureManagerDetails', :class => PictureManagerDetails, :optional => true

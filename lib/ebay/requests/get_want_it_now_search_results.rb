@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  boolean_node :search_worldwide, 'SearchWorldwide', 'true', 'false', :optional => true
     #  object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     class GetWantItNowSearchResults < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetWantItNowSearchResultsRequest'
       text_node :category_id, 'CategoryID', :optional => true

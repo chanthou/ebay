@@ -11,7 +11,7 @@ end
 
     #  text_node :alternate_value, 'AlternateValue', :optional => true
     class ExternalProductID
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ExternalProductID'
       text_node :value, 'Value', :optional => true

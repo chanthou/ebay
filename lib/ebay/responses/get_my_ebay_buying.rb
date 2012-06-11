@@ -24,7 +24,7 @@ module Ebay # :nodoc:
     #  object_node :deleted_from_lost_list, 'DeletedFromLostList', :class => PaginatedItemArray, :optional => true
     #  array_node :user_defined_lists, 'UserDefinedList', :class => UserDefinedList, :default_value => []
     class GetMyeBayBuying < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMyeBayBuyingResponse'
       object_node :buying_summary, 'BuyingSummary', :class => BuyingSummary, :optional => true

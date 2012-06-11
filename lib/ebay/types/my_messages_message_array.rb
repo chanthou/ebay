@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :messages, 'Message', :class => MyMessagesMessage, :default_value => []
     class MyMessagesMessageArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MyMessagesMessageArray'
       array_node :messages, 'Message', :class => MyMessagesMessage, :default_value => []

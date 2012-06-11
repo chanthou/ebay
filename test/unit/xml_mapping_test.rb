@@ -6,8 +6,8 @@ class EbayMappingTest < Test::Unit::TestCase
   include Ebay::Responses
 
 	def setup
-		@ebay_time = GeteBayOfficialTime.load_from_file(response_file_path('official_time_success'))
-	  @valid = VerifyAddItem.load_from_file(response_file_path('verify_add_item'))
+		@ebay_time = GeteBayOfficialTime.parse(load_response('official_time_success'))
+    @valid = VerifyAddItem.parse(load_response('verify_add_item'))
   end
 
 	def test_reference
@@ -19,6 +19,7 @@ class EbayMappingTest < Test::Unit::TestCase
 	  ack = 'Success'
 	  version = '467'
 	  build = 'e467_core_Bundled_3145691_R1'
+    
     assert_equal Time.parse(timestamp), response.timestamp
     assert_equal ack, response.ack
     assert_equal version, response.version

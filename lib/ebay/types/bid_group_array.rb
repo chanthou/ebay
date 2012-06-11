@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :bid_groups, 'BidGroup', :class => BidGroup, :default_value => []
     class BidGroupArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BidGroupArray'
       array_node :bid_groups, 'BidGroup', :class => BidGroup, :default_value => []

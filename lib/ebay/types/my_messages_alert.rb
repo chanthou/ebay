@@ -27,7 +27,7 @@ module Ebay # :nodoc:
     #  object_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :optional => true
     #  object_node :folder, 'Folder', :class => MyMessagesFolder, :optional => true
     class MyMessagesAlert
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MyMessagesAlert'
       text_node :sender, 'Sender', :optional => true

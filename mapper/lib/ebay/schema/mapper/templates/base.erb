@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  <%= node.to_s %>
 <% end -%>
     class <%= class_definition %>
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name '<%= element_name %>'
 <% for node in nodes -%>

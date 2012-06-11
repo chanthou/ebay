@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :social_address_type, 'SocialAddressType', :optional => true
     #  text_node :social_address_id, 'SocialAddressId', :optional => true
     class NonProfitSocialAddress
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'NonProfitSocialAddress'
       text_node :social_address_type, 'SocialAddressType', :optional => true

@@ -21,7 +21,7 @@ module Ebay # :nodoc:
     #  text_node :private_notes, 'PrivateNotes', :optional => true
     #  object_node :discount_price_info, 'DiscountPriceInfo', :class => DiscountPriceInfo, :optional => true
     class Variation
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Variation'
       text_node :sku, 'SKU', :optional => true

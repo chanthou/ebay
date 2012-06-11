@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :level, 'Level', :optional => true
     #  array_node :alerts, 'Alert', :class => SellerDashboardAlert, :default_value => []
     class PowerSellerDashboard
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PowerSellerDashboard'
       text_node :level, 'Level', :optional => true

@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  numeric_node :total_available, 'TotalAvailable', :optional => true
     #  array_node :favorite_searches, 'FavoriteSearch', :class => MyeBayFavoriteSearch, :default_value => []
     class MyeBayFavoriteSearchList
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MyeBayFavoriteSearchList'
       numeric_node :total_available, 'TotalAvailable', :optional => true

@@ -12,6 +12,11 @@ module Ebay #:nodoc:
     attr_reader :errors
     def initialize(errors)
       @errors = errors
+      message = @errors.map do |error|
+        error.long_message if error.respond_to?(:long_message)
+      end
+      message = message.join("\n").to_s
+      super(message)
     end
   end
 
@@ -34,12 +39,11 @@ module Ebay #:nodoc:
   #
   # http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/index.html
   class Api
-    include Inflections
     include ApiMethods
     XmlNs = 'urn:ebay:apis:eBLBaseComponents'
     
     cattr_accessor :use_sandbox, :sandbox_url, :production_url, :site_id
-    cattr_accessor :dev_id, :app_id, :cert, :auth_token
+    cattr_accessor :dev_id, :app_id, :cert, :auth_token, :ru_name
     cattr_accessor :username, :password
     attr_reader :auth_token, :site_id
     
@@ -113,7 +117,7 @@ module Ebay #:nodoc:
     end
   
     private
-    def commit(request_class, params)
+    def commit(request_class, params, response_class)
       format = params.delete(:format) || @format
       
       params[:username] = username
@@ -122,18 +126,67 @@ module Ebay #:nodoc:
       
       request = request_class.new(params)
       yield request if block_given?
-      invoke(request, format)
+      @retries = 0
+      invoke(request, format, response_class)
     end
     
-    def invoke(request, format)
+    def invoke(request, format, response_class)
       response = connection.post( service_uri.path, 
                                   build_body(request), 
                                   build_headers(request.call_name)
                                 )
       
-      parse decompress(response), format
+      response = decompress(response)
+      if connection.logger.debug?
+        connection.logger.debug("Response:")
+        connection.logger.debug(response)
+      end
+      result = begin
+        parse(response_class, response, format)
+      rescue RequestError => e
+        raise_error_or_retry( e ) do
+          invoke(request, format, response_class)
+        end
+      end
+      @retries = 0
+      result
     end
 
+    def raise_error_or_retry(e)
+      if should_retry_error?(e)
+        if connection.logger.debug?
+          connection.logger.debug("Retryable error found.  Retry ##{@retries} commencing...")
+        end
+        
+        yield
+      else
+        raise e
+      end
+    end
+
+    def should_retry_error?(e)
+      retries_suggested = suggested_retry_count_for_error(e)
+      if @retries < retries_suggested
+        @retries += 1
+        true
+      end
+    end
+
+    def suggested_retry_count_for_error(e)
+      result_error = e.errors.first
+      if result_error
+        if result_error.error_classification == "SystemError"
+          2
+        elsif ( result_error.error_parameters.first.value =~ /JDBC connection/i rescue false )
+          5
+        else
+          0
+        end
+      else
+        0
+      end
+    end
+    
     def build_headers(call_name)
       {
         'X-EBAY-API-COMPATIBILITY-LEVEL' => schema_version.to_s,
@@ -149,11 +202,11 @@ module Ebay #:nodoc:
     end
 
     def build_body(request)
-      result = REXML::Document.new
-      result << REXML::XMLDecl.new('1.0', 'UTF-8')
-      result << request.save_to_xml
-      result.root.add_namespace XmlNs
-      result.to_s
+      doc = Nokogiri::XML::Document.new('1.0')
+      doc.encoding = 'UTF-8'
+      doc.default_namespace = XmlNs
+      result.to_xml(Nokogiri::XML::Builder.with(doc))
+      doc.to_s
     end
 
     def connection(refresh = false)
@@ -168,18 +221,20 @@ module Ebay #:nodoc:
         decoded = gzr.read
         gzr.close
         decoded
+        # logger = Logger.new(STDOUT)
+        # logger.debug(decoded)
       else
         response.body
       end
     end
 
-    def parse(content, format)
+    def parse(response_class, content, format)
       case format
       when :object
-        xml = REXML::Document.new(content)
+        xml = Nokogiri::XML(content, nil, nil, Nokogiri::XML::ParseOptions::STRICT)
         # Fixes the wrong case of API returned by eBay
         fix_root_element_name(xml)
-        result = XML::Mapping.load_object_from_xml(xml.root)
+        result = response_class.parse(xml, :single => true)
         case result.ack
         when Ebay::Types::AckCode::Failure, Ebay::Types::AckCode::PartialFailure
           raise RequestError.new(result.errors)

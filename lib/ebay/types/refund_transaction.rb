@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :transaction_id, 'TransactionID', :optional => true
     #  array_node :refund_lines, 'RefundLineArray', 'RefundLine', :class => RefundLine, :default_value => []
     class RefundTransaction
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RefundTransaction'
       text_node :order_id, 'OrderID', :optional => true

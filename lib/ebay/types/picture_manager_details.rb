@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  boolean_node :watermark_user_id, 'WatermarkUserID', 'true', 'false', :optional => true
     #  array_node :folders, 'Folder', :class => PictureManagerFolder, :default_value => []
     class PictureManagerDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PictureManagerDetails'
       text_node :subscription_level, 'SubscriptionLevel', :optional => true

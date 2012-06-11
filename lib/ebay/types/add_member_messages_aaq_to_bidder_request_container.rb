@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :item_id, 'ItemID', :optional => true
     #  object_node :member_message, 'MemberMessage', :class => MemberMessage, :optional => true
     class AddMemberMessagesAAQToBidderRequestContainer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddMemberMessagesAAQToBidderRequestContainer'
       text_node :correlation_id, 'CorrelationID', :optional => true

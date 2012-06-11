@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :name, 'Name', :optional => true
     #  text_node :value, 'Value', :optional => true
     class NotificationEventProperty
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'NotificationEventProperty'
       text_node :event_type, 'EventType', :optional => true

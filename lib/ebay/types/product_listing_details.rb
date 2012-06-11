@@ -22,7 +22,7 @@ module Ebay # :nodoc:
     #  object_node :ticket_listing_details, 'TicketListingDetails', :class => TicketListingDetails, :optional => true
     #  boolean_node :use_first_product, 'UseFirstProduct', 'true', 'false', :optional => true
     class ProductListingDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ProductListingDetails'
       text_node :product_id, 'ProductID', :optional => true

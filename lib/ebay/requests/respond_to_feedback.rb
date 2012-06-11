@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :response_text, 'ResponseText', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class RespondToFeedback < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RespondToFeedbackRequest'
       text_node :feedback_id, 'FeedbackID', :optional => true

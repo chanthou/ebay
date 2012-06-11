@@ -26,7 +26,7 @@ module Ebay # :nodoc:
     #  object_node :variation, 'Variation', :class => Variation, :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class SellingManagerSoldTransaction
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerSoldTransaction'
       text_node :invoice_number, 'InvoiceNumber', :optional => true

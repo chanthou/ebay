@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  boolean_node :subscribe_sm, 'SubscribeSM', 'true', 'false', :optional => true
     #  boolean_node :subscribe_sm_pro, 'SubscribeSMPro', 'true', 'false', :optional => true
     class ValidateTestUserRegistration < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ValidateTestUserRegistrationRequest'
       numeric_node :feedback_score, 'FeedbackScore', :optional => true

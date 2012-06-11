@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :contact_id, 'ContactID', :optional => true
     #  text_node :requester_id, 'RequesterID', :optional => true
     class GetUserContactDetails < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetUserContactDetailsRequest'
       text_node :item_id, 'ItemID', :optional => true

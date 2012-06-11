@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :item_rating_details, 'ItemRatingDetails', :class => ItemRatingDetails, :default_value => []
     class ItemRatingDetailArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ItemRatingDetailArray'
       array_node :item_rating_details, 'ItemRatingDetails', :class => ItemRatingDetails, :default_value => []

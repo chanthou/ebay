@@ -27,7 +27,7 @@ module Ebay # :nodoc:
     #  money_node :cod_cost, 'CODCost', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class ReviseCheckoutStatus < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseCheckoutStatusRequest'
       text_node :item_id, 'ItemID', :optional => true

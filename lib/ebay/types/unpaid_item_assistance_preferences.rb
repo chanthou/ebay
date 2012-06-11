@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :excluded_user, 'ExcludedUser', :optional => true
     #  boolean_node :auto_opt_donation_refund, 'AutoOptDonationRefund', 'true', 'false', :optional => true
     class UnpaidItemAssistancePreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'UnpaidItemAssistancePreferences'
       numeric_node :delay_before_opening_dispute, 'DelayBeforeOpeningDispute', :optional => true

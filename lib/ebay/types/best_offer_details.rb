@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :best_offer_status, 'BestOfferStatus', :optional => true
     #  text_node :best_offer_type, 'BestOfferType', :optional => true
     class BestOfferDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BestOfferDetails'
       numeric_node :best_offer_count, 'BestOfferCount', :optional => true

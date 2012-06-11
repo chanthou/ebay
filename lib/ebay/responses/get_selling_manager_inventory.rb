@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  array_node :selling_manager_products, 'SellingManagerProduct', :class => SellingManagerProduct, :default_value => []
     #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true
     class GetSellingManagerInventory < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellingManagerInventoryResponse'
       time_node :inventory_count_last_calculated_date, 'InventoryCountLastCalculatedDate', :optional => true

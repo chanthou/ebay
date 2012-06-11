@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :shipment_track_number, 'ShipmentTrackNumber', :optional => true
     #  time_node :shipping_time, 'ShippingTime', :optional => true
     class AddDisputeResponse < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddDisputeResponseRequest'
       text_node :dispute_id, 'DisputeID', :optional => true

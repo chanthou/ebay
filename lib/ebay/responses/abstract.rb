@@ -21,7 +21,7 @@ module Ebay # :nodoc:
     #  object_node :bot_block, 'BotBlock', :class => BotBlockResponse, :optional => true
     #  text_node :external_user_data, 'ExternalUserData', :optional => true
     class Abstract < Base
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AbstractResponse'
       time_node :timestamp, 'Timestamp', :optional => true

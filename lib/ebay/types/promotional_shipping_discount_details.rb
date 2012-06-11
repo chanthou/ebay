@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  money_node :order_amount, 'OrderAmount', :optional => true
     #  numeric_node :item_count, 'ItemCount', :optional => true
     class PromotionalShippingDiscountDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PromotionalShippingDiscountDetails'
       text_node :discount_name, 'DiscountName', :optional => true

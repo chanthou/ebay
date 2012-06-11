@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  object_node :order, 'Order', :class => Order, :optional => true
     #  object_node :transaction, 'Transaction', :class => Transaction, :optional => true
     class OrderTransaction
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'OrderTransaction'
       object_node :order, 'Order', :class => Order, :optional => true

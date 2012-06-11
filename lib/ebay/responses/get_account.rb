@@ -14,7 +14,7 @@ module Ebay # :nodoc:
     #  numeric_node :entries_per_page, 'EntriesPerPage', :optional => true
     #  numeric_node :page_number, 'PageNumber', :optional => true
     class GetAccount < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetAccountResponse'
       text_node :account_id, 'AccountID', :optional => true

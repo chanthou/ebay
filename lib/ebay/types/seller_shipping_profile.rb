@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  numeric_node :shipping_profile_id, 'ShippingProfileID', :optional => true
     #  text_node :shipping_profile_name, 'ShippingProfileName', :optional => true
     class SellerShippingProfile
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerShippingProfile'
       numeric_node :shipping_profile_id, 'ShippingProfileID', :optional => true

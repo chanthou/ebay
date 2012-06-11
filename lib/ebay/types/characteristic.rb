@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  text_node :sort_order, 'SortOrder', :optional => true
     #  array_node :value_lists, 'ValueList', :class => Val, :default_value => []
     class Characteristic
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Characteristic'
       numeric_node :attribute_id, 'AttributeID'

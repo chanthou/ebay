@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  money_node :total_sold_value, 'TotalSoldValue', :optional => true
     #  numeric_node :sold_duration_in_days, 'SoldDurationInDays', :optional => true
     class SellingSummary
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingSummary'
       numeric_node :active_auction_count, 'ActiveAuctionCount', :optional => true

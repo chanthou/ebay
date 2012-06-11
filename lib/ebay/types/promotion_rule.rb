@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  text_node :promotion_scheme, 'PromotionScheme', :optional => true
     #  text_node :promotion_method, 'PromotionMethod', :optional => true
     class PromotionRule
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PromotionRule'
       numeric_node :promoted_store_category_id, 'PromotedStoreCategoryID', :optional => true

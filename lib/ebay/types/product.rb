@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  text_node :stock_photo_url, '@stockPhotoURL', :optional => true
     #  text_node :title, '@title', :optional => true
     class Product
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Product'
       object_node :characteristics_set, 'CharacteristicsSet', :class => CharacteristicsSet, :optional => true

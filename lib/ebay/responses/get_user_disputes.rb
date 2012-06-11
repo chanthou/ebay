@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  array_node :dispute_filter_counts, 'DisputeFilterCount', :class => DisputeFilterCount, :default_value => []
     #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true
     class GetUserDisputes < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetUserDisputesResponse'
       text_node :starting_dispute_id, 'StartingDisputeID', :optional => true

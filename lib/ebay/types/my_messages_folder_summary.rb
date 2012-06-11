@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  numeric_node :new_high_priority_count, 'NewHighPriorityCount', :optional => true
     #  numeric_node :total_high_priority_count, 'TotalHighPriorityCount', :optional => true
     class MyMessagesFolderSummary
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MyMessagesFolderSummary'
       numeric_node :folder_id, 'FolderID', :optional => true

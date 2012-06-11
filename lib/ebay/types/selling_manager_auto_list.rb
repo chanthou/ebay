@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  object_node :keep_min_active, 'KeepMinActive', :class => SellingManagerAutoListMinActiveItems, :optional => true
     #  object_node :list_according_to_schedule, 'ListAccordingToSchedule', :class => SellingManagerAutoListAccordingToSchedule, :optional => true
     class SellingManagerAutoList
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerAutoList'
       numeric_node :source_sale_template_id, 'SourceSaleTemplateID', :optional => true

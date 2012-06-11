@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :user_id, 'UserID', :optional => true
     #  text_node :granularity_level, 'GranularityLevel', :optional => true
     class GetBidderList < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetBidderListRequest'
       boolean_node :active_items_only, 'ActiveItemsOnly', 'true', 'false', :optional => true

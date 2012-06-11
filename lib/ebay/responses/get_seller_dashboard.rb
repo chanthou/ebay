@@ -17,7 +17,7 @@ module Ebay # :nodoc:
     #  object_node :seller_account, 'SellerAccount', :class => SellerAccountDashboard, :optional => true
     #  array_node :performances, 'Performance', :class => PerformanceDashboard, :default_value => []
     class GetSellerDashboard < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellerDashboardResponse'
       object_node :search_standing, 'SearchStanding', :class => SearchStandingDashboard, :optional => true

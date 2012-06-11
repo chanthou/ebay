@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  money_node :total_tax_amount, 'TotalTaxAmount', :optional => true
     #  array_node :tax_details, 'TaxDetails', :class => TaxDetails, :default_value => []
     class Taxes
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Taxes'
       money_node :total_tax_amount, 'TotalTaxAmount', :optional => true

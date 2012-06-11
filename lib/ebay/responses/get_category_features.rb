@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  object_node :site_defaults, 'SiteDefaults', :class => SiteDefaults, :optional => true
     #  object_node :feature_definitions, 'FeatureDefinitions', :class => FeatureDefinitions, :optional => true
     class GetCategoryFeatures < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetCategoryFeaturesResponse'
       text_node :category_version, 'CategoryVersion', :optional => true

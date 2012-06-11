@@ -5,7 +5,7 @@
 module Ebay
   module <%= module_name %>
     class <%= class_definition %>
-      include XML::Mapping
+      include XMLMappingTranslation
       include HashInitialization
       root_element_name '<%= element_name %>'
 <% for node in nodes -%>

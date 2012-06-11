@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :inventory_statuses, 'InventoryStatus', :class => InventoryStatus, :default_value => []
     #  array_node :fees, 'Fees', :class => InventoryFees, :default_value => []
     class ReviseInventoryStatus < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseInventoryStatusResponse'
       array_node :inventory_statuses, 'InventoryStatus', :class => InventoryStatus, :default_value => []

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :client_alerts_auth_token, 'ClientAlertsAuthToken', :optional => true
     #  time_node :hard_expiration_time, 'HardExpirationTime', :optional => true
     class GetClientAlertsAuthToken < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetClientAlertsAuthTokenResponse'
       text_node :client_alerts_auth_token, 'ClientAlertsAuthToken', :optional => true

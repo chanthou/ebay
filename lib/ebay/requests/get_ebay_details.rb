@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  value_array_node :detail_names, 'DetailName', :default_value => []
     class GeteBayDetails < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GeteBayDetailsRequest'
       value_array_node :detail_names, 'DetailName', :default_value => []

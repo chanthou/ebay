@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  text_node :terms_and_conditions, 'TermsAndConditions', :optional => true
     #  object_node :vat_details, 'VATDetails', :class => VATDetails, :optional => true
     class BusinessSellerDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BusinessSellerDetails'
       object_node :address, 'Address', :class => Address, :optional => true

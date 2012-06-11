@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  object_node :affiliate_tracking_details, 'AffiliateTrackingDetails', :class => AffiliateTrackingDetails, :optional => true
     #  boolean_node :hide_duplicate_items, 'HideDuplicateItems', 'true', 'false', :optional => true
     class GetProducts < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetProductsRequest'
       object_node :product_search, 'ProductSearch', :class => ProductSearch, :optional => true

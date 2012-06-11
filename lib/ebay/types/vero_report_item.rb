@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  text_node :patent, 'Patent', :optional => true
     #  text_node :detailed_message, 'DetailedMessage', :optional => true
     class VeROReportItem
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'VeROReportItem'
       text_node :item_id, 'ItemID', :optional => true

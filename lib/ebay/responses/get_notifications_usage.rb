@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  array_node :mark_up_mark_down_histories, 'MarkUpMarkDownHistory', 'MarkUpMarkDownEvent', :class => MarkUpMarkDownEvent, :default_value => []
     #  object_node :notification_statistics, 'NotificationStatistics', :class => NotificationStatistics, :optional => true
     class GetNotificationsUsage < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetNotificationsUsageResponse'
       time_node :start_time, 'StartTime', :optional => true

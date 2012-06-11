@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  array_node :bids, 'BidArray', 'Offer', :class => Offer, :default_value => []
     #  text_node :listing_status, 'ListingStatus', :optional => true
     class GetHighBidders < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetHighBiddersResponse'
       array_node :bids, 'BidArray', 'Offer', :class => Offer, :default_value => []

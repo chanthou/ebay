@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  money_node :start_price, 'StartPrice', :optional => true
     #  numeric_node :quantity, 'Quantity', :optional => true
     class InventoryStatus
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'InventoryStatus'
       text_node :sku, 'SKU', :optional => true

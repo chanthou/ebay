@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  numeric_node :duration_in_days, 'DurationInDays', :optional => true
     #  numeric_node :count, 'Count', :optional => true
     class SellingManagerAlert
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerAlert'
       text_node :alert_type, 'AlertType', :optional => true

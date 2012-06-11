@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  object_node :buying_reminders, 'BuyingReminders', :class => Reminders, :optional => true
     #  object_node :selling_reminders, 'SellingReminders', :class => Reminders, :optional => true
     class GetMyeBayReminders < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMyeBayRemindersResponse'
       object_node :buying_reminders, 'BuyingReminders', :class => Reminders, :optional => true

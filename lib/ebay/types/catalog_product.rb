@@ -18,7 +18,7 @@ module Ebay # :nodoc:
     #  object_node :review_details, 'ReviewDetails', :class => ReviewDetails, :optional => true
     #  text_node :product_state, 'ProductState', :optional => true
     class CatalogProduct
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CatalogProduct'
       text_node :title, 'Title', :optional => true

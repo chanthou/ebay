@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  numeric_node :id, 'ID', :optional => true
     #  text_node :display_name, 'DisplayName', :optional => true
     class Condition
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Condition'
       numeric_node :id, 'ID', :optional => true

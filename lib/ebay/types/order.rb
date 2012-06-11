@@ -42,7 +42,7 @@ module Ebay # :nodoc:
     #  text_node :refund_status, 'RefundStatus', :optional => true
     #  array_node :refunds, 'RefundArray', 'Refund', :class => Refund, :default_value => []
     class Order
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Order'
       text_node :order_id, 'OrderID', :optional => true

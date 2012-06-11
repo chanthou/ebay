@@ -1,7 +1,6 @@
 module Ebay #:nodoc:
   module Initializer #:nodoc:
     def initialize(attributes = nil)
-      super
       self.object_attributes = attributes
       yield self if block_given? 
     end

@@ -15,7 +15,7 @@ module Ebay # :nodoc:
     #  text_node :currency, 'Currency', :optional => true
     #  text_node :item_id, 'ItemID', :optional => true
     class GetAccount < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetAccountRequest'
       text_node :account_history_selection, 'AccountHistorySelection', :optional => true

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  money_node :insurance_fee, 'InsuranceFee', :optional => true
     #  text_node :insurance_option, 'InsuranceOption', :optional => true
     class InsuranceDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'InsuranceDetails'
       money_node :insurance_fee, 'InsuranceFee', :optional => true

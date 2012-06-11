@@ -20,7 +20,7 @@ module Ebay # :nodoc:
     #  object_node :user_defined_lists, 'UserDefinedLists', :class => MyeBaySelection, :optional => true
     #  boolean_node :hide_variations, 'HideVariations', 'true', 'false', :optional => true
     class GetMyeBayBuying < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMyeBayBuyingRequest'
       object_node :watch_list, 'WatchList', :class => ItemListCustomization, :optional => true

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :reported_items, 'ReportedItem', :class => VeROReportedItem, :default_value => []
     class VeROReportedItemDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'VeROReportedItemDetails'
       array_node :reported_items, 'ReportedItem', :class => VeROReportedItem, :default_value => []

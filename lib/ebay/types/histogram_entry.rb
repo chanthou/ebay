@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :id, '@id', :optional => true
     #  text_node :name, '@name', :optional => true
     class HistogramEntry
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'HistogramEntry'
       numeric_node :count, 'Count', :optional => true

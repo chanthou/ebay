@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  text_node :detail_version, 'DetailVersion', :optional => true
     #  time_node :update_time, 'UpdateTime', :optional => true
     class TimeZoneDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'TimeZoneDetails'
       text_node :time_zone_id, 'TimeZoneID', :optional => true

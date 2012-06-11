@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :custom_pages, 'CustomPageArray', 'CustomPage', :class => StoreCustomPage, :default_value => []
     class GetStoreCustomPage < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetStoreCustomPageResponse'
       array_node :custom_pages, 'CustomPageArray', 'CustomPage', :class => StoreCustomPage, :default_value => []

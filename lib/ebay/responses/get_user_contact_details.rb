@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  object_node :contact_address, 'ContactAddress', :class => Address, :optional => true
     #  time_node :registration_date, 'RegistrationDate', :optional => true
     class GetUserContactDetails < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetUserContactDetailsResponse'
       text_node :user_id, 'UserID', :optional => true

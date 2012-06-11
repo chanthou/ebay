@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  object_node :message, 'Message', :class => ListingTipMessage, :optional => true
     #  object_node :field, 'Field', :class => ListingTipField, :optional => true
     class ListingTip
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ListingTip'
       text_node :listing_tip_id, 'ListingTipID', :optional => true

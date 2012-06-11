@@ -9,9 +9,27 @@ require 'http_mock'
 require 'credentials'
 require 'active_support'
 
+require 'test/unit/xml'
+
 
 class Test::Unit::TestCase #:nodoc:
   FIXTURES_DIR = File.dirname(__FILE__) + '/fixtures'
+  
+  # Append the xml version header if it doesn't already exist on the xml
+  # string.
+  def assert_xml_equal_with_xml_version(expected_doc, actual_doc, message = nil)
+    xml_version_str = "<?xml version=\"1.0\"?>"
+    if !expected_doc.include?(xml_version_str)
+      expected_doc = xml_version_str + expected_doc
+    end
+    if !actual_doc.include?(xml_version_str)
+      actual_doc = xml_version_str + actual_doc
+    end
+    
+    assert_xml_equal_without_xml_version(expected_doc, actual_doc, message)
+  end
+  alias :assert_xml_equal_without_xml_version :assert_xml_equal
+  alias :assert_xml_equal :assert_xml_equal_with_xml_version
 
   protected
   def responses(name, code = 200)

@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  boolean_node :preview_enabled, 'PreviewEnabled', 'true', 'false', :optional => true
     #  numeric_node :order, 'Order', :optional => true
     class StoreCustomPage
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreCustomPage'
       text_node :name, 'Name', :optional => true

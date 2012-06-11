@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :category_id, 'CategoryID', :optional => true
     #  array_node :item_specifics, 'ItemSpecifics', 'NameValueList', :class => NameValueList, :default_value => []
     class CategoryItemSpecifics
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CategoryItemSpecifics'
       text_node :category_id, 'CategoryID', :optional => true

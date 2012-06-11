@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     #  boolean_node :include_high_priority_message_only, 'IncludeHighPriorityMessageOnly', 'true', 'false', :optional => true
     class GetMyMessages < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMyMessagesRequest'
       value_array_node :alert_ids, 'AlertIDs', 'AlertID', :default_value => []

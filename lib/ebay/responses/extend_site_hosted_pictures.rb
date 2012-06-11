@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :picture_url, 'PictureURL', :optional => true
     class ExtendSiteHostedPictures < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ExtendSiteHostedPicturesResponse'
       text_node :picture_url, 'PictureURL', :optional => true

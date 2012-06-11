@@ -13,7 +13,7 @@ def type
 end
 
     class DescriptionTemplate
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'DescriptionTemplate'
       numeric_node :group_id, 'GroupID', :optional => true

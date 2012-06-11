@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :themes, 'Theme', :class => StoreTheme, :default_value => []
     #  array_node :generic_color_schemes, 'GenericColorSchemeArray', 'ColorScheme', :class => StoreColorScheme, :default_value => []
     class StoreThemeArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreThemeArray'
       array_node :themes, 'Theme', :class => StoreTheme, :default_value => []

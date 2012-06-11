@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  numeric_node :unique_positive_feedback_count, 'UniquePositiveFeedbackCount', :optional => true
     #  numeric_node :unique_neutral_feedback_count, 'UniqueNeutralFeedbackCount', :optional => true
     class BidderDetail
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BidderDetail'
       text_node :user_id, 'UserID', :optional => true

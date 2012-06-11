@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  numeric_node :return_profile_id, 'ReturnProfileID', :optional => true
     #  text_node :return_profile_name, 'ReturnProfileName', :optional => true
     class SellerReturnProfile
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerReturnProfile'
       numeric_node :return_profile_id, 'ReturnProfileID', :optional => true

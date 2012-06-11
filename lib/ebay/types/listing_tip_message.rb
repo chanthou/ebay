@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :long_message, 'LongMessage', :optional => true
     #  text_node :help_url_path, 'HelpURLPath', :optional => true
     class ListingTipMessage
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ListingTipMessage'
       text_node :listing_tip_message_id, 'ListingTipMessageID', :optional => true

@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  time_node :promotional_sale_end_time, 'PromotionalSaleEndTime', :optional => true
     #  text_node :promotional_sale_type, 'PromotionalSaleType', :optional => true
     class PromotionalSale
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PromotionalSale'
       numeric_node :promotional_sale_id, 'PromotionalSaleID', :optional => true

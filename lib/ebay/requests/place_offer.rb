@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  object_node :affiliate_tracking_details, 'AffiliateTrackingDetails', :class => AffiliateTrackingDetails, :optional => true
     #  array_node :variation_specifics, 'VariationSpecifics', 'NameValueList', :class => NameValueList, :default_value => []
     class PlaceOffer < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PlaceOfferRequest'
       object_node :offer, 'Offer', :class => Offer, :optional => true

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :shipping_address, 'ShippingAddress', :class => Address, :optional => true
     class Buyer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Buyer'
       object_node :shipping_address, 'ShippingAddress', :class => Address, :optional => true

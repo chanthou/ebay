@@ -28,7 +28,7 @@ module Ebay # :nodoc:
     #  boolean_node :seller_third_party_checkout_disabled, 'SellerThirdPartyCheckoutDisabled', 'true', 'false', :optional => true
     #  object_node :seller_profile_preferences, 'SellerProfilePreferences', :class => SellerProfilePreferences, :optional => true
     class GetUserPreferences < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetUserPreferencesResponse'
       object_node :bidder_notice_preferences, 'BidderNoticePreferences', :class => BidderNoticePreferences, :optional => true

@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :transaction_id, 'TransactionID', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class AddDispute < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddDisputeRequest'
       text_node :dispute_explanation, 'DisputeExplanation', :optional => true

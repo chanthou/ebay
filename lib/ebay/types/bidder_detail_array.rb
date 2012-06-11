@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :bidder_details, 'BidderDetail', :class => BidderDetail, :default_value => []
     class BidderDetailArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BidderDetailArray'
       array_node :bidder_details, 'BidderDetail', :class => BidderDetail, :default_value => []

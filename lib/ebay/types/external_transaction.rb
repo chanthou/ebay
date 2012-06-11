@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  money_node :fee_or_credit_amount, 'FeeOrCreditAmount', :optional => true
     #  money_node :payment_or_refund_amount, 'PaymentOrRefundAmount', :optional => true
     class ExternalTransaction
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ExternalTransaction'
       text_node :external_transaction_id, 'ExternalTransactionID', :optional => true

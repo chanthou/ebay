@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :attribute_system_version, 'AttributeSystemVersion', :optional => true
     #  array_node :product_search_pages, 'ProductSearchPage', :class => ProductSearchPage, :default_value => []
     class GetProductSearchPage < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetProductSearchPageResponse'
       text_node :attribute_system_version, 'AttributeSystemVersion', :optional => true

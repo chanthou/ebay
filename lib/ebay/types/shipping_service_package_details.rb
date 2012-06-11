@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :name, 'Name', :optional => true
     #  boolean_node :dimensions_required, 'DimensionsRequired', 'true', 'false', :optional => true
     class ShippingServicePackageDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ShippingServicePackageDetails'
       text_node :name, 'Name', :optional => true

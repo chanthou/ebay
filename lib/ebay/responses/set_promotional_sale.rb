@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :status, 'Status', :optional => true
     #  numeric_node :promotional_sale_id, 'PromotionalSaleID', :optional => true
     class SetPromotionalSale < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SetPromotionalSaleResponse'
       text_node :status, 'Status', :optional => true

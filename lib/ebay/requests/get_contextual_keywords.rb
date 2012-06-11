@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :encoding, 'Encoding', :optional => true
     #  text_node :category_id, 'CategoryID', :optional => true
     class GetContextualKeywords < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetContextualKeywordsRequest'
       text_node :url, 'URL', :optional => true

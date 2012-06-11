@@ -27,7 +27,7 @@ module Ebay # :nodoc:
     #  boolean_node :lsd, 'LSD', 'true', 'false', :optional => true
     #  text_node :keywords, 'Keywords', :optional => true
     class Category
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Category'
       boolean_node :best_offer_enabled, 'BestOfferEnabled', 'true', 'false', :optional => true

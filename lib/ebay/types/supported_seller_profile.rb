@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :short_summary, 'ShortSummary', :optional => true
     #  object_node :category_group, 'CategoryGroup', :class => CategoryGroup, :optional => true
     class SupportedSellerProfile
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SupportedSellerProfile'
       numeric_node :profile_id, 'ProfileID', :optional => true

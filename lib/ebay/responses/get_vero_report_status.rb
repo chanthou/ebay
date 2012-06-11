@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  text_node :vero_report_packet_status, 'VeROReportPacketStatus', :optional => true
     #  array_node :reported_item_details, 'ReportedItemDetails', 'ReportedItem', :class => VeROReportedItem, :default_value => []
     class GetVeROReportStatus < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetVeROReportStatusResponse'
       object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true

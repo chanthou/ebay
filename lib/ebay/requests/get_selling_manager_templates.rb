@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :sale_template_id, 'SaleTemplateID', :optional => true
     class GetSellingManagerTemplates < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellingManagerTemplatesRequest'
       numeric_node :sale_template_id, 'SaleTemplateID', :optional => true

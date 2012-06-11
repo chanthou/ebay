@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :deleted_field, 'DeletedField', :optional => true
     #  boolean_node :verify_only, 'VerifyOnly', 'true', 'false', :optional => true
     class ReviseSellingManagerTemplate < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseSellingManagerTemplateRequest'
       numeric_node :sale_template_id, 'SaleTemplateID', :optional => true

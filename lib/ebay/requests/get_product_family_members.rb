@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :product_searches, 'ProductSearch', :class => ProductSearch, :default_value => []
     class GetProductFamilyMembers < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetProductFamilyMembersRequest'
       array_node :product_searches, 'ProductSearch', :class => ProductSearch, :default_value => []

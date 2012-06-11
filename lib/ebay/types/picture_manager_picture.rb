@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  time_node :date, 'Date', :optional => true
     #  array_node :display_formats, 'DisplayFormat', :class => PictureManagerPictureDisplay, :default_value => []
     class PictureManagerPicture
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PictureManagerPicture'
       text_node :picture_url, 'PictureURL', :optional => true

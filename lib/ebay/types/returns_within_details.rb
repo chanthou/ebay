@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :returns_within_option, 'ReturnsWithinOption', :optional => true
     #  text_node :description, 'Description', :optional => true
     class ReturnsWithinDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReturnsWithinDetails'
       text_node :returns_within_option, 'ReturnsWithinOption', :optional => true

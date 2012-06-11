@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  boolean_node :featured, 'Featured', 'true', 'false', :optional => true
     #  numeric_node :campaign_id, 'CampaignID', :optional => true
     class GetCharities < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetCharitiesRequest'
       text_node :charity_id, 'CharityID', :optional => true

@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :username, 'Username', :optional => true
     #  text_node :password, 'Password', :optional => true
     class UserIdPassword
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'UserIdPassword'
       text_node :app_id, 'AppId', :optional => true

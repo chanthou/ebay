@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  boolean_node :include_confidence, 'IncludeConfidence', 'true', 'false', :optional => true
     #  boolean_node :category_specifics_file_info, 'CategorySpecificsFileInfo', 'true', 'false', :optional => true
     class GetCategorySpecifics < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetCategorySpecificsRequest'
       text_node :category_id, 'CategoryID', :optional => true

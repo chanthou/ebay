@@ -16,7 +16,7 @@ module Ebay # :nodoc:
     #  numeric_node :quantity_limit_remaining, 'QuantityLimitRemaining', :optional => true
     #  money_node :amount_limit_remaining, 'AmountLimitRemaining', :optional => true
     class MyeBaySellingSummary
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MyeBaySellingSummary'
       numeric_node :active_auction_count, 'ActiveAuctionCount', :optional => true

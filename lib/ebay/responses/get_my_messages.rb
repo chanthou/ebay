@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  array_node :alerts, 'Alerts', 'Alert', :class => MyMessagesAlert, :default_value => []
     #  array_node :messages, 'Messages', 'Message', :class => MyMessagesMessage, :default_value => []
     class GetMyMessages < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMyMessagesResponse'
       object_node :summary, 'Summary', :class => MyMessagesSummary, :optional => true

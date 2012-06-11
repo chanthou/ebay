@@ -22,7 +22,7 @@ module Ebay # :nodoc:
     #  numeric_node :pending_rte_request_count, 'PendingRTERequestCount', :optional => true
     #  numeric_node :declined_rte_request_count, 'DeclinedRTERequestCount', :optional => true
     class Reminders
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Reminders'
       numeric_node :payment_to_send_count, 'PaymentToSendCount', :optional => true

@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :affiliation_type, 'AffiliationType', :optional => true
     #  time_node :last_used_time, 'LastUsedTime', :optional => true
     class CharityAffiliationDetail
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CharityAffiliationDetail'
       text_node :charity_id, 'CharityID', :optional => true

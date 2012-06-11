@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :seller_id, 'SellerID', :optional => true
     #  time_node :last_bid_time, 'LastBidTime', :optional => true
     class ItemBidDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ItemBidDetails'
       text_node :item_id, 'ItemID', :optional => true

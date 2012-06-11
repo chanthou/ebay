@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :status, 'Status', :optional => true
     #  object_node :alert, 'Alert', :class => SellerDashboardAlert, :optional => true
     class PerformanceDashboard
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PerformanceDashboard'
       value_array_node :sites, 'Site', :default_value => []

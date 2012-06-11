@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  numeric_node :longitude, 'Longitude', :optional => true
     #  text_node :address_type, 'AddressType', :optional => true
     class NonProfitAddress
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'NonProfitAddress'
       text_node :address_line1, 'AddressLine1', :optional => true

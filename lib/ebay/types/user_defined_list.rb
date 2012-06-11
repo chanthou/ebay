@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  object_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList, :optional => true
     #  object_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList, :optional => true
     class UserDefinedList
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'UserDefinedList'
       text_node :name, 'Name', :optional => true

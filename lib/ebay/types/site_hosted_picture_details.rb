@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  text_node :external_picture_url, 'ExternalPictureURL', :optional => true
     #  time_node :use_by_date, 'UseByDate', :optional => true
     class SiteHostedPictureDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SiteHostedPictureDetails'
       text_node :picture_name, 'PictureName', :optional => true

@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  value_array_node :picture_watermarks, 'PictureWatermark', :default_value => []
     #  numeric_node :extension_in_days, 'ExtensionInDays', :optional => true
     class UploadSiteHostedPictures < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'UploadSiteHostedPicturesRequest'
       text_node :picture_name, 'PictureName', :optional => true

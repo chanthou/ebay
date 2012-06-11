@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :cancel_offers, 'CancelOffer', :class => CancelOffer, :default_value => []
     class CancelOfferArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CancelOfferArray'
       array_node :cancel_offers, 'CancelOffer', :class => CancelOffer, :default_value => []

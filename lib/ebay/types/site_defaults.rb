@@ -125,7 +125,7 @@ module Ebay # :nodoc:
     #  text_node :compatible_vehicle_type, 'CompatibleVehicleType', :optional => true
     #  text_node :payment_options_group, 'PaymentOptionsGroup', :optional => true
     class SiteDefaults
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SiteDefaults'
       array_node :listing_durations, 'ListingDuration', :class => ListingDurationReference, :default_value => []

@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  array_node :listing_durations, 'ListingDuration', :class => ListingDurationDefinition, :default_value => []
     #  numeric_node :version, '@Version', :optional => true
     class ListingDurationDefinitions
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ListingDurationDefinitions'
       array_node :listing_durations, 'ListingDuration', :class => ListingDurationDefinition, :default_value => []

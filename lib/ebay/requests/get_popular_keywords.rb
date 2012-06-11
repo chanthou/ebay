@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  numeric_node :max_keywords_retrieved, 'MaxKeywordsRetrieved', :optional => true
     #  object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     class GetPopularKeywords < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetPopularKeywordsRequest'
       text_node :category_id, 'CategoryID', :optional => true

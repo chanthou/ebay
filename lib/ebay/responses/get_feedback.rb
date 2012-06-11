@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  numeric_node :entries_per_page, 'EntriesPerPage', :optional => true
     #  numeric_node :page_number, 'PageNumber', :optional => true
     class GetFeedback < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetFeedbackResponse'
       array_node :feedback_details, 'FeedbackDetailArray', 'FeedbackDetail', :class => FeedbackDetail, :default_value => []

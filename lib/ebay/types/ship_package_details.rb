@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  object_node :weight_major, 'WeightMajor', :class => Measure, :optional => true
     #  object_node :weight_minor, 'WeightMinor', :class => Measure, :optional => true
     class ShipPackageDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ShipPackageDetails'
       text_node :measurement_unit, 'MeasurementUnit', :optional => true

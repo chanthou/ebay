@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :id, '@id', :optional => true
     #  
     class CharityAffiliation
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CharityAffiliation'
       text_node :id, '@id', :optional => true

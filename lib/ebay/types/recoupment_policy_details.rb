@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :detail_version, 'DetailVersion', :optional => true
     #  time_node :update_time, 'UpdateTime', :optional => true
     class RecoupmentPolicyDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RecoupmentPolicyDetails'
       boolean_node :enforced_on_listing_site, 'EnforcedOnListingSite', 'true', 'false', :optional => true

@@ -17,7 +17,7 @@ module Ebay # :nodoc:
     #  text_node :detail_version, 'DetailVersion', :optional => true
     #  time_node :update_time, 'UpdateTime', :optional => true
     class SiteBuyerRequirementDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SiteBuyerRequirementDetails'
       boolean_node :linked_paypal_account, 'LinkedPayPalAccount', 'true', 'false', :optional => true

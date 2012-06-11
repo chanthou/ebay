@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :custom_categories, 'CustomCategory', :class => StoreCustomCategory, :default_value => []
     class StoreCustomCategoryArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreCustomCategoryArray'
       array_node :custom_categories, 'CustomCategory', :class => StoreCustomCategory, :default_value => []

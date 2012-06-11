@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  boolean_node :purchase_reminder_email_preferences, 'PurchaseReminderEmailPreferences', 'true', 'false', :optional => true
     class PurchaseReminderEmailPreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PurchaseReminderEmailPreferences'
       boolean_node :purchase_reminder_email_preferences, 'PurchaseReminderEmailPreferences', 'true', 'false', :optional => true

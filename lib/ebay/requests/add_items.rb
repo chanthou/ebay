@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :add_item_request_containers, 'AddItemRequestContainer', :class => AddItemRequestContainer, :default_value => []
     class AddItems < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddItemsRequest'
       array_node :add_item_request_containers, 'AddItemRequestContainer', :class => AddItemRequestContainer, :default_value => []

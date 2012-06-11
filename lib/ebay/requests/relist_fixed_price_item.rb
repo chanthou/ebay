@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  object_node :item, 'Item', :class => Item, :optional => true
     #  text_node :deleted_field, 'DeletedField', :optional => true
     class RelistFixedPriceItem < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RelistFixedPriceItemRequest'
       object_node :item, 'Item', :class => Item, :optional => true

@@ -26,7 +26,7 @@ module Ebay # :nodoc:
     #  time_node :last_opened_time, 'LastOpenedTime', :optional => true
     #  boolean_node :title_with_compatibility, 'TitleWithCompatibility', 'true', 'false', :optional => true
     class Store
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Store'
       text_node :name, 'Name', :optional => true

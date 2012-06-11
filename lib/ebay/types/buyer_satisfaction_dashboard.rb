@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :status, 'Status', :optional => true
     #  array_node :alerts, 'Alert', :class => SellerDashboardAlert, :default_value => []
     class BuyerSatisfactionDashboard
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BuyerSatisfactionDashboard'
       text_node :status, 'Status', :optional => true

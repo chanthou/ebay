@@ -17,7 +17,7 @@ end
     #  text_node :error_message, 'ErrorMessage', :optional => true
     #  text_node :delivery_url_name, 'DeliveryURLName', :optional => true
     class NotificationDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'NotificationDetails'
       text_node :delivery_url, 'DeliveryURL', :optional => true

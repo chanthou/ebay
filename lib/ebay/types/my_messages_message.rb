@@ -31,7 +31,7 @@ module Ebay # :nodoc:
     #  time_node :item_end_time, 'ItemEndTime', :optional => true
     #  text_node :item_title, 'ItemTitle', :optional => true
     class MyMessagesMessage
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MyMessagesMessage'
       text_node :sender, 'Sender', :optional => true

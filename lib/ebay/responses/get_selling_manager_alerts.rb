@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :alerts, 'Alert', :class => SellingManagerAlert, :default_value => []
     class GetSellingManagerAlerts < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellingManagerAlertsResponse'
       array_node :alerts, 'Alert', :class => SellingManagerAlert, :default_value => []

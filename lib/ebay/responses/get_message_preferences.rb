@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :asq_preferences, 'ASQPreferences', :class => ASQPreferences, :optional => true
     class GetMessagePreferences < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMessagePreferencesResponse'
       object_node :asq_preferences, 'ASQPreferences', :class => ASQPreferences, :optional => true

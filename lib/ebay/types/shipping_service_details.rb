@@ -28,7 +28,7 @@ module Ebay # :nodoc:
     #  time_node :update_time, 'UpdateTime', :optional => true
     #  text_node :shipping_category, 'ShippingCategory', :optional => true
     class ShippingServiceDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ShippingServiceDetails'
       text_node :description, 'Description', :optional => true

@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  time_node :creation_time, 'CreationTime', :optional => true
     #  text_node :user_id, 'UserID', :optional => true
     class BuyingGuide
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BuyingGuide'
       text_node :name, 'Name', :optional => true

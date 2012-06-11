@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  
     class Base64Binary
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Base64Binary'
       

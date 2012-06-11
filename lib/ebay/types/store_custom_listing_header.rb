@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  boolean_node :add_to_favorite_stores, 'AddToFavoriteStores', 'true', 'false', :optional => true
     #  boolean_node :sign_up_for_store_newsletter, 'SignUpForStoreNewsletter', 'true', 'false', :optional => true
     class StoreCustomListingHeader
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreCustomListingHeader'
       text_node :display_type, 'DisplayType', :optional => true

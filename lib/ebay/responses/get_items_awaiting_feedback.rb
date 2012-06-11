@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :items_awaiting_feedback, 'ItemsAwaitingFeedback', :class => PaginatedTransactionArray, :optional => true
     class GetItemsAwaitingFeedback < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetItemsAwaitingFeedbackResponse'
       object_node :items_awaiting_feedback, 'ItemsAwaitingFeedback', :class => PaginatedTransactionArray, :optional => true

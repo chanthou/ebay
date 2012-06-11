@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  object_node :email_date_range, 'EmailDateRange', :class => TimeRange, :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class GetSellingManagerEmailLog < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellingManagerEmailLogRequest'
       text_node :item_id, 'ItemID', :optional => true

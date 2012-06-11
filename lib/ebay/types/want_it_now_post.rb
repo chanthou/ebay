@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  numeric_node :response_count, 'ResponseCount', :optional => true
     #  text_node :title, 'Title', :optional => true
     class WantItNowPost
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'WantItNowPost'
       text_node :category_id, 'CategoryID', :optional => true

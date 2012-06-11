@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :up_sell_gallery_sort_filter, 'UpSellGallerySortFilter', :optional => true
     #  text_node :up_sell_item_sort_filter, 'UpSellItemSortFilter', :optional => true
     class CrossPromotionPreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CrossPromotionPreferences'
       boolean_node :cross_promotion_enabled, 'CrossPromotionEnabled', 'true', 'false', :optional => true

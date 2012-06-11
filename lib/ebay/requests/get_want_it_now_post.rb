@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :post_id, 'PostID', :optional => true
     class GetWantItNowPost < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetWantItNowPostRequest'
       text_node :post_id, 'PostID', :optional => true

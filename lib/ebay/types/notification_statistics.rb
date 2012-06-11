@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  numeric_node :expired_count, 'ExpiredCount', :optional => true
     #  numeric_node :error_count, 'ErrorCount', :optional => true
     class NotificationStatistics
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'NotificationStatistics'
       numeric_node :delivered_count, 'DeliveredCount', :optional => true

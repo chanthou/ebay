@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :item, 'Item', :class => Item, :optional => true
     class AddFixedPriceItem < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddFixedPriceItemRequest'
       object_node :item, 'Item', :class => Item, :optional => true

@@ -21,7 +21,7 @@ module Ebay # :nodoc:
     #  text_node :detail_version, 'DetailVersion', :optional => true
     #  time_node :update_time, 'UpdateTime', :optional => true
     class ReturnPolicyDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReturnPolicyDetails'
       array_node :refunds, 'Refund', :class => RefundDetails, :default_value => []

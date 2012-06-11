@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :store_url, 'StoreURL', :optional => true
     #  text_node :store_name, 'StoreName', :optional => true
     class Storefront
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Storefront'
       numeric_node :store_category_id, 'StoreCategoryID'

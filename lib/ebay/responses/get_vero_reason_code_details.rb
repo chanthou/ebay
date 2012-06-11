@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :vero_reason_code_details, 'VeROReasonCodeDetails', 'VeROSiteDetail', :class => VeROSiteDetail, :default_value => []
     class GetVeROReasonCodeDetails < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetVeROReasonCodeDetailsResponse'
       array_node :vero_reason_code_details, 'VeROReasonCodeDetails', 'VeROSiteDetail', :class => VeROSiteDetail, :default_value => []

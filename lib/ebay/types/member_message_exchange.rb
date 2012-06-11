@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  time_node :creation_date, 'CreationDate', :optional => true
     #  time_node :last_modified_date, 'LastModifiedDate', :optional => true
     class MemberMessageExchange
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MemberMessageExchange'
       object_node :item, 'Item', :class => Item, :optional => true

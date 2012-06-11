@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  numeric_node :level_limit, 'LevelLimit', :optional => true
     #  text_node :user_id, 'UserID', :optional => true
     class GetStore < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetStoreRequest'
       boolean_node :category_structure_only, 'CategoryStructureOnly', 'true', 'false', :optional => true

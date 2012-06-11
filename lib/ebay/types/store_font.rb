@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  text_node :desc_size, 'DescSize', :optional => true
     #  text_node :desc_color, 'DescColor', :optional => true
     class StoreFont
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreFont'
       text_node :name_face, 'NameFace', :optional => true

@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :delivery_url, 'DeliveryURL', :optional => true
     #  text_node :status, 'Status', :optional => true
     class DeliveryURLDetail
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'DeliveryURLDetail'
       text_node :delivery_url_name, 'DeliveryURLName', :optional => true

@@ -15,7 +15,7 @@ module Ebay # :nodoc:
     #  text_node :message_id, 'MessageID', :optional => true
     #  text_node :parent_message_id, 'ParentMessageID', :optional => true
     class MemberMessage
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MemberMessage'
       text_node :message_type, 'MessageType', :optional => true

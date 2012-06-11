@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  text_node :member_message_id, 'MemberMessageID', :optional => true
     #  text_node :sender_id, 'SenderID', :optional => true
     class GetMemberMessages < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetMemberMessagesRequest'
       text_node :item_id, 'ItemID', :optional => true

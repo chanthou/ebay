@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :sale_template_id, 'SaleTemplateID', :optional => true
     class GetSellingManagerTemplateAutomationRule < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellingManagerTemplateAutomationRuleRequest'
       numeric_node :sale_template_id, 'SaleTemplateID', :optional => true

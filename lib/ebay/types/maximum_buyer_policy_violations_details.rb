@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :number_of_policy_violations, 'NumberOfPolicyViolations', :class => NumberOfPolicyViolationsDetails, :default_value => []
     #  array_node :policy_violation_durations, 'PolicyViolationDuration', :class => PolicyViolationDurationDetails, :default_value => []
     class MaximumBuyerPolicyViolationsDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MaximumBuyerPolicyViolationsDetails'
       array_node :number_of_policy_violations, 'NumberOfPolicyViolations', :class => NumberOfPolicyViolationsDetails, :default_value => []

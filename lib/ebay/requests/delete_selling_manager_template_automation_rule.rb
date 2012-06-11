@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  boolean_node :delete_automated_relisting_rule, 'DeleteAutomatedRelistingRule', 'true', 'false', :optional => true
     #  boolean_node :delete_automated_second_chance_offer_rule, 'DeleteAutomatedSecondChanceOfferRule', 'true', 'false', :optional => true
     class DeleteSellingManagerTemplateAutomationRule < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'DeleteSellingManagerTemplateAutomationRuleRequest'
       numeric_node :sale_template_id, 'SaleTemplateID', :optional => true

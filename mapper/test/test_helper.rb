@@ -5,10 +5,6 @@ $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'rubygems'
 require 'bundler/setup'
 require 'test/unit'
-# require 'ebay'
-# require 'http_mock'
-# require 'credentials'
-# require 'active_support'
 
 
 class Test::Unit::TestCase #:nodoc:

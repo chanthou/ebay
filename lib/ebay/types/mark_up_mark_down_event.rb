@@ -10,7 +10,7 @@ end
     #  time_node :time, 'Time', :optional => true
     #  text_node :reason, 'Reason', :optional => true
     class MarkUpMarkDownEvent
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MarkUpMarkDownEvent'
       text_node :type, 'Type', :optional => true

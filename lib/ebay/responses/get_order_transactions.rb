@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :orders, 'OrderArray', 'Order', :class => Order, :default_value => []
     class GetOrderTransactions < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetOrderTransactionsResponse'
       array_node :orders, 'OrderArray', 'Order', :class => Order, :default_value => []

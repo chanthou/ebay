@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :payout_method, 'PayoutMethod', :optional => true
     #  array_node :user_agreement_infos, 'UserAgreementInfo', :class => UserAgreementInfo, :default_value => []
     class SellereBayPaymentProcessConsentCode
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellereBayPaymentProcessConsentCode'
       boolean_node :payout_method_set, 'PayoutMethodSet', 'true', 'false', :optional => true

@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  boolean_node :too_many_matches_found, 'TooManyMatchesFound', 'true', 'false'
     #  numeric_node :total_products, 'TotalProducts'
     class ResponseAttributeSet
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ResponseAttributeSet'
       numeric_node :approximate_pages, 'ApproximatePages'

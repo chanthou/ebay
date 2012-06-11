@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  boolean_node :logo_customized, 'LogoCustomized', 'true', 'false', :optional => true
     #  boolean_node :copy_email, 'CopyEmail', 'true', 'false', :optional => true
     class EndOfAuctionEmailPreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'EndOfAuctionEmailPreferences'
       text_node :template_text, 'TemplateText', :optional => true

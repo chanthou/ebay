@@ -3,7 +3,7 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     class ClassifiedAdShippingMethodEnabledDefinition
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ClassifiedAdShippingMethodEnabledDefinition'
     end

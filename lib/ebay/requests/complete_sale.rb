@@ -14,7 +14,7 @@ module Ebay # :nodoc:
     #  text_node :order_id, 'OrderID', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class CompleteSale < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CompleteSaleRequest'
       text_node :item_id, 'ItemID', :optional => true

@@ -14,7 +14,7 @@ module Ebay # :nodoc:
     #  array_node :transactions, 'TransactionArray', 'Transaction', :class => Transaction, :default_value => []
     #  boolean_node :paypal_preferred, 'PayPalPreferred', 'true', 'false', :optional => true
     class GetItemTransactions < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetItemTransactionsResponse'
       object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true

@@ -34,7 +34,7 @@ module Ebay # :nodoc:
     #  text_node :notes, 'Notes', :optional => true
     #  array_node :shipment_tracking_details, 'ShipmentTrackingDetails', :class => ShipmentTrackingDetails, :default_value => []
     class Shipment
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Shipment'
       time_node :estimated_delivery_date, 'EstimatedDeliveryDate', :optional => true

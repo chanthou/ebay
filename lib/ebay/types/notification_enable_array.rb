@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :notification_enables, 'NotificationEnable', :class => NotificationEnable, :default_value => []
     class NotificationEnableArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'NotificationEnableArray'
       array_node :notification_enables, 'NotificationEnable', :class => NotificationEnable, :default_value => []

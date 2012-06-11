@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :value, 'Value', :optional => true
     #  text_node :param_id, '@ParamID', :optional => true
     class ErrorParameter
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ErrorParameter'
       text_node :value, 'Value', :optional => true

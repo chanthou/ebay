@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  text_node :gallery_error_info, 'GalleryErrorInfo', :optional => true
     #  text_node :external_picture_url, 'ExternalPictureURL', :optional => true
     class PictureDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PictureDetails'
       text_node :gallery_type, 'GalleryType', :optional => true

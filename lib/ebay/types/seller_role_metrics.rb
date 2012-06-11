@@ -13,7 +13,7 @@ module Ebay # :nodoc:
     #  numeric_node :cross_border_transaction_count, 'CrossBorderTransactionCount', :optional => true
     #  numeric_node :cross_border_transaction_percent, 'CrossBorderTransactionPercent', :optional => true
     class SellerRoleMetrics
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerRoleMetrics'
       numeric_node :positive_feedback_left_count, 'PositiveFeedbackLeftCount', :optional => true

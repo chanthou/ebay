@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :platform, 'Platform', :optional => true
     #  boolean_node :include_final_value_fees, 'IncludeFinalValueFees', 'true', 'false', :optional => true
     class GetOrderTransactions < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetOrderTransactionsRequest'
       array_node :item_transaction_ids, 'ItemTransactionIDArray', 'ItemTransactionID', :class => ItemTransactionID, :default_value => []

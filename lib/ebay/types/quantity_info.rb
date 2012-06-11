@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :minimum_remnant_set, 'MinimumRemnantSet', :optional => true
     class QuantityInfo
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'QuantityInfo'
       numeric_node :minimum_remnant_set, 'MinimumRemnantSet', :optional => true

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :store, 'Store', :class => Store, :optional => true
     class GetStore < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetStoreResponse'
       object_node :store, 'Store', :class => Store, :optional => true

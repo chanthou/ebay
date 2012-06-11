@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  
     #  
     class ContactHoursDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ContactHoursDetails'
       text_node :time_zone_id, 'TimeZoneID', :optional => true

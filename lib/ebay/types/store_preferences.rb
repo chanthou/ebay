@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :vacation_preferences, 'VacationPreferences', :class => StoreVacationPreferences, :optional => true
     class StorePreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StorePreferences'
       object_node :vacation_preferences, 'VacationPreferences', :class => StoreVacationPreferences, :optional => true

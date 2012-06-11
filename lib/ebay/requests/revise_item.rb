@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :deleted_field, 'DeletedField', :optional => true
     #  boolean_node :verify_only, 'VerifyOnly', 'true', 'false', :optional => true
     class ReviseItem < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseItemRequest'
       object_node :item, 'Item', :class => Item, :optional => true

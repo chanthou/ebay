@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :sale_records, 'SaleRecord', :class => SellingManagerSoldOrder, :default_value => []
     #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true
     class GetSellingManagerSoldListings < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellingManagerSoldListingsResponse'
       array_node :sale_records, 'SaleRecord', :class => SellingManagerSoldOrder, :default_value => []

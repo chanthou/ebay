@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :feedback_periods, 'FeedbackPeriod', :class => FeedbackPeriod, :default_value => []
     class FeedbackPeriodArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'FeedbackPeriodArray'
       array_node :feedback_periods, 'FeedbackPeriod', :class => FeedbackPeriod, :default_value => []

@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  array_node :buying_guides, 'BuyingGuide', :class => BuyingGuide, :default_value => []
     #  text_node :buying_guide_hub, 'BuyingGuideHub', :optional => true
     class BuyingGuideDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BuyingGuideDetails'
       array_node :buying_guides, 'BuyingGuide', :class => BuyingGuide, :default_value => []

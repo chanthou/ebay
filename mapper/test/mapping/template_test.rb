@@ -22,7 +22,7 @@ require 'ebay/types/person'
 module Ebay
   module Requests
     class GeteBayOfficialTime < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include HashInitialization
       root_element_name 'GeteBayOfficialTimeRequest'
       text_node :name, 'Name'
@@ -48,7 +48,7 @@ end
 module Ebay
   module Responses
     class GeteBayOfficialTime < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include HashInitialization
       root_element_name 'GeteBayOfficialTimeResponse'
       def errors?

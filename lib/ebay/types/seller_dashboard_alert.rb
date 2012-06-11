@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :severity, 'Severity', :optional => true
     #  text_node :text, 'Text', :optional => true
     class SellerDashboardAlert
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerDashboardAlert'
       text_node :severity, 'Severity', :optional => true

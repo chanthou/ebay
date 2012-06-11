@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :email_logs, 'EmailLog', :class => SellingManagerEmailLog, :default_value => []
     class GetSellingManagerEmailLog < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellingManagerEmailLogResponse'
       array_node :email_logs, 'EmailLog', :class => SellingManagerEmailLog, :default_value => []

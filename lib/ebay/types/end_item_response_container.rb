@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :correlation_id, 'CorrelationID', :optional => true
     #  array_node :errors, 'Errors', :class => Error, :default_value => []
     class EndItemResponseContainer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'EndItemResponseContainer'
       time_node :end_time, 'EndTime', :optional => true

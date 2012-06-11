@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :message_id, 'MessageID', :optional => true
     #  text_node :seller_inventory_id, 'SellerInventoryID', :optional => true
     class EndItemRequestContainer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'EndItemRequestContainer'
       text_node :item_id, 'ItemID', :optional => true

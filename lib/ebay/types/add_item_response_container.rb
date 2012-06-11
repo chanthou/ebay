@@ -15,7 +15,7 @@ module Ebay # :nodoc:
     #  text_node :message, 'Message', :optional => true
     #  value_array_node :discount_reasons, 'DiscountReason', :default_value => []
     class AddItemResponseContainer
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AddItemResponseContainer'
       text_node :item_id, 'ItemID', :optional => true

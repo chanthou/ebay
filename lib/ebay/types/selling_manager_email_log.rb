@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :email_state, 'EmailState', :optional => true
     #  time_node :event_time, 'EventTime', :optional => true
     class SellingManagerEmailLog
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellingManagerEmailLog'
       text_node :email_type, 'EmailType', :optional => true

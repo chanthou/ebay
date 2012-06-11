@@ -49,7 +49,7 @@ module Ebay # :nodoc:
     #  boolean_node :qualifies_for_selling, 'QualifiesForSelling', 'true', 'false', :optional => true
     #  text_node :static_alias, 'StaticAlias', :optional => true
     class User
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'User'
       boolean_node :about_me_page, 'AboutMePage', 'true', 'false', :optional => true

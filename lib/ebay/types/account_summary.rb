@@ -24,7 +24,7 @@ module Ebay # :nodoc:
     #  boolean_node :past_due, 'PastDue', 'true', 'false', :optional => true
     #  text_node :payment_method, 'PaymentMethod', :optional => true
     class AccountSummary
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'AccountSummary'
       text_node :account_state, 'AccountState', :optional => true

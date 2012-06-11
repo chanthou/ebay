@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :folder_id, 'FolderID', :optional => true
     class DeleteSellingManagerInventoryFolder < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'DeleteSellingManagerInventoryFolderRequest'
       numeric_node :folder_id, 'FolderID', :optional => true

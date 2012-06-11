@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  money_node :tax_on_shipping_amount, 'TaxOnShippingAmount', :optional => true
     #  money_node :tax_on_handling_amount, 'TaxOnHandlingAmount', :optional => true
     class TaxDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'TaxDetails'
       text_node :imposition, 'Imposition', :optional => true

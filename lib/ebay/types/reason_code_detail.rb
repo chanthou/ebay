@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :detailed_text, 'DetailedText', :optional => true
     #  numeric_node :code_id, '@codeID', :optional => true
     class ReasonCodeDetail
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReasonCodeDetail'
       text_node :brief_text, 'BriefText', :optional => true

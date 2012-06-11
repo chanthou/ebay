@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :items, 'ItemArray', 'Item', :class => Item, :default_value => []
     #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true
     class PaginatedItemArray
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PaginatedItemArray'
       array_node :items, 'ItemArray', 'Item', :class => Item, :default_value => []

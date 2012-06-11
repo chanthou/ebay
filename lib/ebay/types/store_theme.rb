@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :name, 'Name', :optional => true
     #  object_node :color_scheme, 'ColorScheme', :class => StoreColorScheme, :optional => true
     class StoreTheme
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'StoreTheme'
       numeric_node :theme_id, 'ThemeID', :optional => true

@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :detail_version, 'DetailVersion', :optional => true
     #  time_node :update_time, 'UpdateTime', :optional => true
     class VariationDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'VariationDetails'
       numeric_node :max_variations_per_item, 'MaxVariationsPerItem', :optional => true

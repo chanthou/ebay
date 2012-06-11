@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  boolean_node :reserve_lowered, 'ReserveLowered', 'true', 'false', :optional => true
     #  boolean_node :reserve_removed, 'ReserveRemoved', 'true', 'false', :optional => true
     class ReviseStatus
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ReviseStatus'
       boolean_node :item_revised, 'ItemRevised', 'true', 'false'

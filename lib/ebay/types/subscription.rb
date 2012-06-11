@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :site_id, 'SiteID', :optional => true
     #  boolean_node :active, 'Active', 'true', 'false', :optional => true
     class Subscription
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Subscription'
       text_node :eias_token, 'EIASToken', :optional => true

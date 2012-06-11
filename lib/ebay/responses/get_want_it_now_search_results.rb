@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  numeric_node :page_number, 'PageNumber', :optional => true
     #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult, :optional => true
     class GetWantItNowSearchResults < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetWantItNowSearchResultsResponse'
       array_node :want_it_now_posts, 'WantItNowPostArray', 'WantItNowPost', :class => WantItNowPost, :default_value => []

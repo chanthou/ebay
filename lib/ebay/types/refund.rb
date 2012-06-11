@@ -20,7 +20,7 @@ module Ebay # :nodoc:
     #  time_node :estimated_refund_completion_time, 'EstimatedRefundCompletionTime', :optional => true
     #  text_node :seller_note_to_buyer, 'SellerNoteToBuyer', :optional => true
     class Refund
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Refund'
       money_node :refund_from_seller, 'RefundFromSeller', :optional => true

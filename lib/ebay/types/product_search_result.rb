@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  array_node :attribute_sets, 'AttributeSet', :class => ResponseAttributeSet, :default_value => []
     #  boolean_node :display_stock_photos, 'DisplayStockPhotos', 'true', 'false', :optional => true
     class ProductSearchResult
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ProductSearchResult'
       text_node :id, 'ID', :optional => true

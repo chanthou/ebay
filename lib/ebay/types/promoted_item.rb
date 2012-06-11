@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  array_node :promotion_details, 'PromotionDetails', :class => PromotionDetails, :default_value => []
     #  text_node :time_left, 'TimeLeft', :optional => true
     class PromotedItem
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'PromotedItem'
       text_node :item_id, 'ItemID', :optional => true

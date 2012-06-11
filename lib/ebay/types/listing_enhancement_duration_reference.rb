@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :duration, 'Duration', :optional => true
     class ListingEnhancementDurationReference
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ListingEnhancementDurationReference'
       text_node :duration, 'Duration', :optional => true

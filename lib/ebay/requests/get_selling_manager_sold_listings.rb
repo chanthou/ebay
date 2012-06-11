@@ -14,7 +14,7 @@ module Ebay # :nodoc:
     #  object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     #  object_node :sale_date_range, 'SaleDateRange', :class => TimeRange, :optional => true
     class GetSellingManagerSoldListings < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetSellingManagerSoldListingsRequest'
       object_node :search, 'Search', :class => SellingManagerSearch, :optional => true

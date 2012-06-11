@@ -42,7 +42,7 @@ module Ebay # :nodoc:
     #  text_node :seller_ebay_payment_process_status, 'SellereBayPaymentProcessStatus', :optional => true
     #  object_node :seller_ebay_payment_process_consent, 'SellereBayPaymentProcessConsent', :class => SellereBayPaymentProcessConsentCode, :optional => true
     class Seller
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'Seller'
       numeric_node :paisa_pay_status, 'PaisaPayStatus', :optional => true

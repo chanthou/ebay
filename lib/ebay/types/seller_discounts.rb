@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  money_node :original_item_shipping_cost, 'OriginalItemShippingCost', :optional => true
     #  array_node :seller_discounts, 'SellerDiscount', :class => SellerDiscount, :default_value => []
     class SellerDiscounts
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'SellerDiscounts'
       money_node :original_item_price, 'OriginalItemPrice', :optional => true

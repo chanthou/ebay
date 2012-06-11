@@ -92,7 +92,7 @@ module Ebay
     #
     # Official Documentation for #{name}[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/io_#{name}.html]
     def #{ebay_underscore(name)}(params = {})
-      commit(Ebay::Requests::#{name}, params)
+      commit(Ebay::Requests::#{name}, params, Ebay::Responses::#{name})
     end
               DEF
             end

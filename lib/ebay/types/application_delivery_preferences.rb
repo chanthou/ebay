@@ -12,7 +12,7 @@ module Ebay # :nodoc:
     #  text_node :payload_version, 'PayloadVersion', :optional => true
     #  array_node :delivery_url_details, 'DeliveryURLDetails', :class => DeliveryURLDetail, :default_value => []
     class ApplicationDeliveryPreferences
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'ApplicationDeliveryPreferences'
       text_node :application_url, 'ApplicationURL', :optional => true

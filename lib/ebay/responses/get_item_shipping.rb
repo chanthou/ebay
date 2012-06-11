@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :optional => true
     class GetItemShipping < Abstract
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'GetItemShippingResponse'
       object_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :optional => true

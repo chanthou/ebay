@@ -1,8 +1,10 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
+require 'ruby-debug'
+
 class Widget
-  include XML::Mapping
-  cdata_node :description, 'description', :default_value => nil
+  include XMLMappingTranslation
+  cdata_node :description, 'description'
 end
 
 class CdataNodeTest < Test::Unit::TestCase
@@ -17,7 +19,8 @@ class CdataNodeTest < Test::Unit::TestCase
   end
 
   def test_load_from_xml
-    item = Widget.load_from_xml(REXML::Document.new(@xml).root)
+    debugger
+    item = Widget.parse(@xml)
     assert_instance_of String, item.description
     assert_equal 'Blah blah blah', item.description
   end 
@@ -25,7 +28,7 @@ class CdataNodeTest < Test::Unit::TestCase
   def test_save_to_xml
     widget = Widget.new
     widget.description = '<name>Cody Fauser</name>'
-    assert_equal '<widget><description><![CDATA[<name>Cody Fauser</name>]]></description></widget>', widget.save_to_xml.to_s
+    assert_xml_equal '<widget><description>&lt;name&gt;Cody Fauser&lt;/name&gt;</description></widget>', widget.to_xml
   end
 end
 

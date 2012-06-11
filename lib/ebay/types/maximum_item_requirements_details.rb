@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  numeric_node :maximum_item_count, 'MaximumItemCount', :optional => true
     #  numeric_node :minimum_feedback_score, 'MinimumFeedbackScore', :optional => true
     class MaximumItemRequirementsDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'MaximumItemRequirementsDetails'
       numeric_node :maximum_item_count, 'MaximumItemCount', :optional => true

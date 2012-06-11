@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  numeric_node :neutral_feedback_left_count, 'NeutralFeedbackLeftCount', :optional => true
     #  numeric_node :feedback_left_percent, 'FeedbackLeftPercent', :optional => true
     class BuyerRoleMetrics
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'BuyerRoleMetrics'
       numeric_node :positive_feedback_left_count, 'PositiveFeedbackLeftCount', :optional => true

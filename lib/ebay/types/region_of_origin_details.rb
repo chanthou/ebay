@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :detail_version, 'DetailVersion', :optional => true
     #  time_node :update_time, 'UpdateTime', :optional => true
     class RegionOfOriginDetails
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'RegionOfOriginDetails'
       text_node :region_of_origin, 'RegionOfOrigin', :optional => true

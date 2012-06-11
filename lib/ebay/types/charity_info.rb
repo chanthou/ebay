@@ -24,7 +24,7 @@ module Ebay # :nodoc:
     #  array_node :non_profit_social_addresses, 'NonProfitSocialAddress', :class => NonProfitSocialAddress, :default_value => []
     #  text_node :id, '@id', :optional => true
     class CharityInfo
-      include XML::Mapping
+      include XMLMappingTranslation
       include Initializer
       root_element_name 'CharityInfo'
       text_node :name, 'Name', :optional => true
