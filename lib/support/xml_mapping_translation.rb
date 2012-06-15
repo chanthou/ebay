@@ -79,14 +79,14 @@ module XMLMappingTranslation
       end
       element name, TimeNode, hm_options
     end
-
+    
     def value_array_node(*args)
       if Hash===args[-1]
         options = args.pop
       end
-
+    
       name, path1, path2 = args
-      tag = path2 ? "#{path1}/#{path2}" : path1
+      tag = path2 || path1
       
       if options.has_key?(:default_value)
         raise "Only support default value of [] on array_node" if options[:default_value] != []
@@ -94,7 +94,10 @@ module XMLMappingTranslation
         options[:optional] = true
       end
       
-      element name, String, build_hm_options(tag, options)
+      hm_options = build_hm_options(tag, options)
+      hm_options[:single] = false
+      hm_options[:xpath] = "./#{path1}/#{path2}" if path2
+      element name, String, hm_options
     end
 
     def build_hm_options(tag, xm_options)

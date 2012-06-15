@@ -19,7 +19,6 @@ class CdataNodeTest < Test::Unit::TestCase
   end
 
   def test_load_from_xml
-    debugger
     item = Widget.parse(@xml)
     assert_instance_of String, item.description
     assert_equal 'Blah blah blah', item.description

@@ -136,13 +136,8 @@ module Ebay #:nodoc:
                                   build_headers(request.call_name)
                                 )
       
-      response = decompress(response)
-      if connection.logger.debug?
-        connection.logger.debug("Response:")
-        connection.logger.debug(response)
-      end
       result = begin
-        parse(response_class, response, format)
+        parse(response_class, decompress(response), format)
       rescue RequestError => e
         raise_error_or_retry( e ) do
           invoke(request, format, response_class)
@@ -154,10 +149,6 @@ module Ebay #:nodoc:
 
     def raise_error_or_retry(e)
       if should_retry_error?(e)
-        if connection.logger.debug?
-          connection.logger.debug("Retryable error found.  Retry ##{@retries} commencing...")
-        end
-        
         yield
       else
         raise e
@@ -202,11 +193,11 @@ module Ebay #:nodoc:
     end
 
     def build_body(request)
-      doc = Nokogiri::XML::Document.new('1.0')
-      doc.encoding = 'UTF-8'
-      doc.default_namespace = XmlNs
-      result.to_xml(Nokogiri::XML::Builder.with(doc))
-      doc.to_s
+      result = Nokogiri::XML::Document.new('1.0')
+      result.encoding = 'UTF-8'
+      request.to_xml(Nokogiri::XML::Builder.with(result))
+      result.root.default_namespace = XmlNs
+      result.to_s
     end
 
     def connection(refresh = false)

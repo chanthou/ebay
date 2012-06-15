@@ -27,11 +27,11 @@ class NotificationsTest < Test::Unit::TestCase
     assert_equal 'fguser2', question.sender_id
     assert_equal '148860', question.message_id
   end 
-
+  
   def test_empty_notification
     assert_raise(InvalidNotificationError){ Notification.new(nil) }
   end
-
+  
   def test_invalid_notification_signature
     assert !Notification.new(notifications('invalid_signature')).valid?
   end

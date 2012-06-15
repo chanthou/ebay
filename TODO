@@ -1,0 +1,3 @@
+* fix cdata node parsing (changed unit test in past commit to make them past. not sure it's correct)
+* enable Ebay::Notification::XML to ensure it works with nokogiri
+

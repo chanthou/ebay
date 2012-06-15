@@ -13,10 +13,14 @@ class MoneyNode
     
     money_node = node.xpath(xpath, xpath_options).first
     
-    amount = money_node.text.to_f
-    currency_id = money_node.attributes["currencyID"].text
+    new_node = nil
+    if money_node
+      amount = money_node.text.to_f
+      currency_id = money_node.attributes["currencyID"].text
     
-    Money.new((amount * 100).to_i, currency_id)
+      new_node = Money.new((amount * 100).to_i, currency_id)
+    end
+    new_node
   end
   
   def self.to_xml_node(xml, item, options)
