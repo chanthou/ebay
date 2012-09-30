@@ -5,9 +5,9 @@ require "ebay/version"
 Gem::Specification.new do |s|
   s.name        = Ebay::PKG_NAME
   s.version     = Ebay::VERSION
-  s.author      = "Cody Fausner"
-  s.email       = "codyfauser@gmail.com"
-  s.homepage    = "https://github.com/codyfauser/ebay"
+  s.author      = "Adam Thorsen"
+  s.email       = "adam.thorsen@gmail.com"
+  s.homepage    = "https://github.com/awt/ebay"
   s.summary     = "Ruby interface to the eBay XML Trading API"
   s.description = "A ruby library for interacting with the eBay XML Trading API, based on self-generated request and response classes."
   
@@ -21,5 +21,5 @@ Gem::Specification.new do |s|
   s.add_dependency("money", ["~> 1.7.1"])
   
   s.add_development_dependency("activesupport", ["~> 2.3"])
-  s.add_development_dependency("libxml-ruby", ["~> 1.1.4"])
+  s.add_development_dependency("libxml-ruby", ["~> 2.1"])
 end
