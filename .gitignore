@@ -2,3 +2,4 @@
 Gemfile.lock
 lib/ebay/schema/ebaySvc.xsd
 examples/config.rb
+ebayapi-awt-0.13.0.gem
